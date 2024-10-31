@@ -122,7 +122,7 @@ export default function MobileMealPlanner() {
         {mealPlan.length > 0 && mealPlan[currentIndex].date.toLocaleDateString('tr-TR', { weekday: 'long', day: 'numeric', month: 'long' })}
       </p>
       <div className="developer-credit">
-        <p>Developed by <a href="https://github.com/username">Your Name</a></p>
+        <p>Developed by <a href="https://www.linkedin.com/in/batuhanslkmm/">Batuhan SALKIM</a></p>
       </div>
     </div>
   );
