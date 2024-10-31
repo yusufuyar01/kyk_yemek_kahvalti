@@ -5,7 +5,7 @@ import { useSwipeable } from 'react-swipeable'
 import { ChevronLeft, ChevronRight, Coffee, Utensils } from 'lucide-react'
 
 // Add more meal options
-const generateRandomMeal = (isBreakfast: boolean) => {
+const generateRandomMeal = (isBreakfast) => {
   const breakfastItems = [
     'Simit ve Peynir', 'Menemen', 'Sucuklu Yumurta', 'Bal ve Kaymak',
     'Börek', 'Poğaça', 'Çılbır', 'Kahvaltı Tabağı', 'Omlet',
@@ -25,7 +25,7 @@ const generateRandomMeal = (isBreakfast: boolean) => {
   return items[Math.floor(Math.random() * items.length)]
 }
 
-const generateRandomDrink = (isBreakfast: boolean) => {
+const generateRandomDrink = (isBreakfast) => {
   const breakfastDrinks = ['Çay', 'Türk Kahvesi', 'Portakal Suyu', 'Ayran', 'Süt', 'Ihlamur', 'Bitki Çayı', 'Salep']
   const dinnerDrinks = ['Ayran', 'Şalgam Suyu', 'Limonata', 'Maden Suyu', 'Şerbet', 'Kola', 'Soda', 'Meyveli Soda']
   const drinks = isBreakfast ? breakfastDrinks : dinnerDrinks
