@@ -7,7 +7,25 @@ body, html {
   align-items: center;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #e0e7ff, #f3e8ff);
+  background: linear-gradient(to bottom, var(--background-gradient-start), var(--background-gradient-end));
+  transition: background-color 0.3s ease;
+  overflow-x: hidden;
+}
+
+:root {
+  --background-gradient-start: #e0e7ff;
+  --background-gradient-end: #f3e8ff;
+  --text-color: #3730a3;
+  --title-color: #4338ca;
+  --button-bg-color: #6366f1;
+}
+
+[data-theme="dark"] {
+  --background-gradient-start: #111827;
+  --background-gradient-end: #1f2937;
+  --text-color: #f3f4f6;
+  --title-color: #93c5fd;
+  --button-bg-color: #4b5563;
 }
 
 .meal-planner {
@@ -15,50 +33,83 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.5rem;
   width: 100%;
   max-width: 24rem;
   margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .main-title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
-  color: #3730a3;
+  margin-bottom: 2rem;
+  color: var(--text-color);
   text-align: center;
+  word-wrap: break-word;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.theme-toggle-icon {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  transition: transform 0.3s ease;
 }
 
 .planner-container {
   width: 100%;
   max-width: 24rem;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .day-component {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+[data-theme="dark"] .day-component {
+  background-color: #1f2937;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Diğer stiller aynı kalacak */
+
+
+
 .day-title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 0.75rem;
-  color: #4338ca;
+  margin-bottom: 1rem;
+  color: var(--title-color);
   text-align: center;
 }
 
 .meal-section {
   width: 100%;
   margin-bottom: 1rem;
+  transition: transform 0.2s ease;
 }
 
 .meal-title {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   display: flex;
@@ -75,17 +126,14 @@ body, html {
 
 .meal-icon {
   margin-right: 0.5rem;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-.meal-text {
+.meal-text, .drink-text {
   font-size: 1rem;
-}
-
-.drink-text {
-  font-size: 0.875rem;
-  color: #666666;
+  color: var(--text-color);
+  text-align: center;
 }
 
 .navigation-buttons {
@@ -93,18 +141,24 @@ body, html {
   justify-content: space-between;
   width: 100%;
   max-width: 24rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .nav-button {
-  padding: 0.5rem;
-  background-color: #6366f1;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--button-bg-color);
   color: white;
   border: none;
   border-radius: 9999px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button svg {
+  margin-right: 0.5rem;
 }
 
 .nav-button:hover {
@@ -116,29 +170,24 @@ body, html {
   cursor: not-allowed;
 }
 
-.button-icon {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
 .date-indicator {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 0.875rem;
-  color: #4338ca;
+  color: var(--title-color);
   font-weight: 500;
   text-align: center;
 }
 
 .developer-credit {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   font-size: 0.875rem;
-  color: #4338ca;
+  color: var(--title-color);
   font-weight: 500;
   text-align: center;
 }
 
 .developer-credit a {
-  color: #4338ca;
+  color: var(--title-color);
   text-decoration: none;
   font-weight: 600;
 }
@@ -149,33 +198,60 @@ body, html {
 
 @media (min-width: 640px) {
   .main-title {
-    font-size: 1.875rem;
-    margin-bottom: 2rem;
+    font-size: 2rem;
   }
+}
+/* MobileMealPlanner.css */
 
-  .planner-container {
-    max-width: 28rem;
-  }
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 
-  .day-title {
-    font-size: 1.5rem;
-  }
+@keyframes fadeOut {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
 
-  .meal-title {
-    font-size: 1.25rem;
-  }
+.fade-enter {
+  animation: fadeIn 0.5s ease forwards;
+}
 
-  .meal-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
+.fade-exit {
+  animation: fadeOut 0.5s ease forwards;
+}
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-100%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
 
-  .meal-text {
-    font-size: 1.125rem;
-  }
+@keyframes slideOutLeft {
+  0% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(-100%); }
+}
 
-  .button-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
+@keyframes slideInRight {
+  0% { opacity: 0; transform: translateX(100%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideOutRight {
+  0% { opacity: 1; transform: translateX(0); }
+  100% { opacity: 0; transform: translateX(100%); }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.slide-out-left {
+  animation: slideOutLeft 0.5s ease forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease forwards;
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.5s ease forwards;
 }
