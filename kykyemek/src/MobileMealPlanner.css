@@ -1,0 +1,181 @@
+/* MobileMealPlanner.css */
+
+body, html {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #e0e7ff, #f3e8ff);
+}
+
+.meal-planner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+  max-width: 24rem;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #3730a3;
+  text-align: center;
+}
+
+.planner-container {
+  width: 100%;
+  max-width: 24rem;
+}
+
+.day-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.day-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: #4338ca;
+  text-align: center;
+}
+
+.meal-section {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.meal-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.meal-title.breakfast {
+  color: #f97316;
+}
+
+.meal-title.dinner {
+  color: #16a34a;
+}
+
+.meal-icon {
+  margin-right: 0.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.meal-text {
+  font-size: 1rem;
+}
+
+.drink-text {
+  font-size: 0.875rem;
+  color: #666666;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 24rem;
+  margin-top: 1rem;
+}
+
+.nav-button {
+  padding: 0.5rem;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-button:hover {
+  background-color: #4f46e5;
+}
+
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.date-indicator {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #4338ca;
+  font-weight: 500;
+  text-align: center;
+}
+
+.developer-credit {
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #4338ca;
+  font-weight: 500;
+  text-align: center;
+}
+
+.developer-credit a {
+  color: #4338ca;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.developer-credit a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+  .main-title {
+    font-size: 1.875rem;
+    margin-bottom: 2rem;
+  }
+
+  .planner-container {
+    max-width: 28rem;
+  }
+
+  .day-title {
+    font-size: 1.5rem;
+  }
+
+  .meal-title {
+    font-size: 1.25rem;
+  }
+
+  .meal-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .meal-text {
+    font-size: 1.125rem;
+  }
+
+  .button-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
