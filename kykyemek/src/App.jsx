@@ -37,6 +37,7 @@ export default function MobileMealPlanner() {
     return localStorage.getItem('theme') === 'dark' || localStorage.getItem('theme') === null;
   });
   const [animationClass, setAnimationClass] = useState('');
+  const [alertMessage, setAlertMessage] = useState('');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
@@ -68,10 +69,16 @@ export default function MobileMealPlanner() {
         const maxForward = Math.min(startIndex + 5, mealPlan.length - 1);
         const maxBackward = Math.max(startIndex - 5, 0);
 
-        if (newIndex >= maxBackward && newIndex <= maxForward) {
-          return newIndex;
+        if (newIndex > maxForward) {
+          setAlertMessage("En fazla 5 gün sonraki yemeği görebilirsiniz.");
+          return prev;
+        } else if (newIndex < maxBackward) {
+          setAlertMessage("En fazla 5 gün önceki yemeği görebilirsiniz.");
+          return prev;
         }
-        return prev;
+
+        setAlertMessage('');
+        return newIndex;
       });
       setAnimationClass(direction === 'next' ? 'slide-in-right' : 'slide-in-left');
     }, 300);
@@ -98,6 +105,13 @@ export default function MobileMealPlanner() {
           />
         )}
       </div>
+
+      {alertMessage && (
+        <div className="alert-message">
+          <p>{alertMessage}</p>
+        </div>
+      )}
+
       <div className="navigation-buttons">
         <button
           className="nav-button"
