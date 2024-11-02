@@ -3,72 +3,51 @@ import { useSwipeable } from 'react-swipeable';
 import { ChevronLeft, ChevronRight, Coffee, Utensils, Sun, Moon } from 'lucide-react';
 import './MobileMealPlanner.css';
 
-const generateRandomMeal = (isBreakfast) => {
-  const breakfastItems = ['Simit ve Peynir', 'Menemen', 'Sucuklu Yumurta'];
-  const dinnerItems = ['Mercimek Çorbası', 'Karnıyarık', 'Köfte'];
-  const items = isBreakfast ? breakfastItems : dinnerItems;
-  return items[Math.floor(Math.random() * items.length)];
-};
-
-const generateRandomDrink = (isBreakfast) => {
-  const breakfastDrinks = ['Çay', 'Türk Kahvesi'];
-  const dinnerDrinks = ['Ayran', 'Şalgam Suyu'];
-  const drinks = isBreakfast ? breakfastDrinks : dinnerDrinks;
-  return drinks[Math.floor(Math.random() * drinks.length)];
-};
-
-const DayComponent = ({ date, breakfast, dinner, animationClass }) => (
+const DayComponent = ({ data, animationClass }) => (
   <div className={`day-component ${animationClass}`}>
-    <h2 className="day-title">{date.toLocaleDateString('tr-TR', { weekday: 'long', day: 'numeric', month: 'long' })}</h2>
+    <h2 className="day-title">{data.gun}, {data.tarih}</h2>
     <div className="meal-section">
       <h3 className="meal-title breakfast">
         <Coffee className="meal-icon" /> Kahvaltı
       </h3>
-      <p className="meal-text">{breakfast.meal}</p>
-      <p className="drink-text">İçecek: {breakfast.drink}</p>
+      <p className="meal-text">{data.kahvalti.ana_urun}</p>
+      <p className="meal-text">Kahvaltılık: {data.kahvalti.kahvaltilik.join(', ')}</p>
+      <p className="drink-text">İçecek: {data.kahvalti.icecek}</p>
+      <p className="meal-text">{data.kahvalti.ekmek}, {data.kahvalti.su}</p>
     </div>
     <div className="meal-section">
       <h3 className="meal-title dinner">
-        <Utensils className="meal-icon" /> Akşam Yemeği
+        <Utensils className="meal-icon" /> Öğle/Akşam Yemeği
       </h3>
-      <p className="meal-text">{dinner.meal}</p>
-      <p className="drink-text">İçecek: {dinner.drink}</p>
+      <p className="meal-text">Çorba: {data.ogle_aksam.corba}</p>
+      <p className="meal-text">Ana Yemek: {data.ogle_aksam.ana_yemek}</p>
+      <p className="meal-text">Yardımcı Yemek: {data.ogle_aksam.yardimci_yemek}</p>
+      <p className="meal-text">Ek: {data.ogle_aksam.ek}</p>
+      <p className="meal-text">{data.ogle_aksam.ekmek}, {data.ogle_aksam.su}</p>
     </div>
   </div>
 );
 
 export default function MobileMealPlanner() {
   const [mealPlan, setMealPlan] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(5);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    // İlk değer olarak localStorage'dan tema tercihini al veya koyu mod ile başla
     return localStorage.getItem('theme') === 'dark' || localStorage.getItem('theme') === null;
   });
   const [animationClass, setAnimationClass] = useState('');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); // Tema tercihine göre localStorage güncelle
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
   }, [isDarkMode]);
 
   useEffect(() => {
-    const today = new Date();
-    const mealPlanData = Array.from({ length: 11 }, (_, i) => {
-      const date = new Date(today);
-      date.setDate(today.getDate() - 5 + i);
-      return {
-        date,
-        breakfast: {
-          meal: generateRandomMeal(true),
-          drink: generateRandomDrink(true),
-        },
-        dinner: {
-          meal: generateRandomMeal(false),
-          drink: generateRandomDrink(false),
-        },
-      };
-    });
-    setMealPlan(mealPlanData);
+    fetch('/src/kasimveriler.json')
+      .then(response => response.json())
+      .then(data => {
+        setMealPlan(data.kasim_2024);
+      })
+      .catch(error => console.error('Error fetching meal plan:', error));
   }, []);
 
   const handleNavigation = (direction) => {
@@ -97,9 +76,7 @@ export default function MobileMealPlanner() {
       <div className="planner-container" {...handlers}>
         {mealPlan.length > 0 && (
           <DayComponent
-            date={mealPlan[currentIndex].date}
-            breakfast={mealPlan[currentIndex].breakfast}
-            dinner={mealPlan[currentIndex].dinner}
+            data={mealPlan[currentIndex]}
             animationClass={animationClass}
           />
         )}
@@ -123,7 +100,7 @@ export default function MobileMealPlanner() {
         </button>
       </div>
       <p className="date-indicator">
-        {mealPlan.length > 0 && mealPlan[currentIndex].date.toLocaleDateString('tr-TR', { weekday: 'long', day: 'numeric', month: 'long' })}
+        {mealPlan.length > 0 && `${mealPlan[currentIndex].gun}, ${mealPlan[currentIndex].tarih}`}
       </p>
       <div className="developer-credit">
         <p>Developed by <a href="https://www.linkedin.com/in/batuhanslkmm/">Batuhan SALKIM</a></p>
