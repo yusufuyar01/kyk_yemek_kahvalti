@@ -172,23 +172,22 @@
       "tarih": "08.11.2024",
       "gun": "Cuma",
       "kahvalti": {
-        "ana_urun": "Haşlanmış Yumurta",
+        "ana_urun": "Peynirli Omlet",
+        "ana_urun2": "Dere Otlu Poğaça",
         "kahvaltilik": [
-          "Beyaz Peynir",
-          "Kaşar Peyniri",
-          "Siyah Zeytin",
-          "Domates",
-          "Salatalık"
+          "Krem Peynir",
+          "Siyah/Yeşil Zeytin",
+          "Helva"
         ],
         "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500ml Su"
       },
       "ogle_aksam": {
-        "corba": "Mercimek Çorbası",
-        "ana_yemek": "Tavuk Döner / Pirinç Pilavı",
-        "yardimci_yemek": "Kuru Fasulye",
-        "ek": "Ayran",
+        "corba": "Arabaşı / Tarhana Çorbası",
+        "ana_yemek": "Etsiz Nohut Yemeği / Patates Köftesi",
+        "yardimci_yemek": "Arpa Şehriye Pilavı",
+        "ek": "Karışık Turşu(susuz)",
         "ekmek": "Çeyrek Ekmek",
         "su": "500ml Su"
       }
@@ -197,23 +196,22 @@
       "tarih": "09.11.2024",
       "gun": "Cumartesi",
       "kahvalti": {
-        "ana_urun": "Menemen",
+        "ana_urun": "Karışık Kızartma",
+        "ana_urun2": "Haşlanmış Yumurta",
         "kahvaltilik": [
           "Beyaz Peynir",
-          "Siyah Zeytin",
-          "Yeşil Zeytin",
-          "Reçel",
-          "Tereyağı"
+          "Siyah/Yeşil Zeytin",
+          "Mevsim Sebzeli Söğüş"
         ],
         "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500ml Su"
       },
       "ogle_aksam": {
-        "corba": "Domates Çorbası",
-        "ana_yemek": "Etli Nohut / Pirinç Pilavı",
-        "yardimci_yemek": "Makarna",
-        "ek": "Cacık",
+        "corba": "Mercimek / Kremalı Mantar Çorbası",
+        "ana_yemek": "Tavuk Şiş (Patates Püresi) (%90) / Mevsim Türlü (%10)",
+        "yardimci_yemek": "Sebzeli Bulgur Pilavı",
+        "ek": "Çikolatalı Pasta",
         "ekmek": "Çeyrek Ekmek",
         "su": "500ml Su"
       }
