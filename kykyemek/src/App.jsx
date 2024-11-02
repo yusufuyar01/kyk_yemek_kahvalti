@@ -11,13 +11,14 @@ const DayComponent = ({ data, animationClass }) => (
         <Coffee className="meal-icon" /> Kahvaltı
       </h3>
       <p className="meal-text">{data.kahvalti.ana_urun}</p>
+      <p className="meal-text">{data.kahvalti.ana_urun2}</p>
       <p className="meal-text">{data.kahvalti.kahvaltilik.join(', ')}</p>
       <p className="drink-text">{data.kahvalti.icecek}</p>
       <p className="meal-text">{data.kahvalti.ekmek}, {data.kahvalti.su}</p>
     </div>
     <div className="meal-section">
       <h3 className="meal-title dinner">
-        <Utensils className="meal-icon" /> Öğle/Akşam Yemeği
+        <Utensils className="meal-icon" />Akşam Yemeği
       </h3>
       <p className="meal-text">{data.ogle_aksam.corba}</p>
       <p className="meal-text">{data.ogle_aksam.ana_yemek}</p>
