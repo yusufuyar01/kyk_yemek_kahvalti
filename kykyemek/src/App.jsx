@@ -42,7 +42,7 @@ export default function MobileMealPlanner() {
   }, [isDarkMode]);
 
   useEffect(() => {
-    fetch('/src/kasimveriler.json')
+    fetch('../kasimveriler.json')
       .then(response => response.json())
       .then(data => {
         setMealPlan(data.kasim_2024);
