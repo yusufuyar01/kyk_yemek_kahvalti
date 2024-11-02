@@ -46,6 +46,14 @@ export default function MobileMealPlanner() {
       .then(response => response.json())
       .then(data => {
         setMealPlan(data.kasim_2024);
+
+        // Bugünün tarihini al ve veri setindeki tarihle eşleşecek formatı kullan
+        const today = new Date();
+        const todayString = `${today.getDate().toString().padStart(2, '0')}/${(today.getMonth() + 1).toString().padStart(2, '0')}/${today.getFullYear()}`;
+        
+        // Bugünün tarihini veri setinde bul ve currentIndex olarak ayarla
+        const todayIndex = data.kasim_2024.findIndex(day => day.tarih === todayString);
+        setCurrentIndex(todayIndex >= 0 ? todayIndex : 0); // Bugün yoksa 0. indekse ayarlanır
       })
       .catch(error => console.error('Error fetching meal plan:', error));
   }, []);
@@ -53,9 +61,13 @@ export default function MobileMealPlanner() {
   const handleNavigation = (direction) => {
     setAnimationClass(direction === 'next' ? 'slide-out-left' : 'slide-out-right');
     setTimeout(() => {
-      setCurrentIndex((prev) => 
-        direction === 'next' ? Math.min(prev + 1, mealPlan.length - 1) : Math.max(prev - 1, 0)
-      );
+      setCurrentIndex((prev) => {
+        if (direction === 'next') {
+          return Math.min(prev + 1, currentIndex + 5, mealPlan.length - 1); // Bugünden itibaren 5 gün sonrasına kadar
+        } else {
+          return Math.max(prev - 1, currentIndex - 5, 0); // Bugünden itibaren 5 gün öncesine kadar
+        }
+      });
       setAnimationClass(direction === 'next' ? 'slide-in-right' : 'slide-in-left');
     }, 300);
   };
@@ -85,7 +97,7 @@ export default function MobileMealPlanner() {
         <button
           className="nav-button"
           onClick={() => handleNavigation('prev')}
-          disabled={currentIndex === 0}
+          disabled={currentIndex === 0 || currentIndex <= currentIndex - 5}
         >
           <ChevronLeft className="button-icon" />
           Önceki
@@ -93,7 +105,7 @@ export default function MobileMealPlanner() {
         <button
           className="nav-button"
           onClick={() => handleNavigation('next')}
-          disabled={currentIndex === mealPlan.length - 1}
+          disabled={currentIndex === mealPlan.length - 1 || currentIndex >= currentIndex + 5}
         >
           Sonraki
           <ChevronRight className="button-icon" />
