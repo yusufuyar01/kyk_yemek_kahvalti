@@ -131,8 +131,8 @@ export default function MobileMealPlanner() {
         </button>
       </div>
       <div className="developer-credit">
-        <p>Developed by <a href="https://www.linkedin.com/in/batuhanslkmm/">Batuhan SALKIM</a></p>
-      </div>
+  <p>Developed by <a target="_blank" href="https://www.linkedin.com/in/batuhanslkmm/">Batuhan Salkım</a>, <a target="_blank" href="https://www.linkedin.com/in/ahmetcaliskann/">Ahmet Çalışkan</a></p>
+</div>
     </div>
   );
 }
