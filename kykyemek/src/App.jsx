@@ -40,11 +40,15 @@ const DayComponent = ({ date, breakfast, dinner, animationClass }) => (
 export default function MobileMealPlanner() {
   const [mealPlan, setMealPlan] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(5);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // İlk değer olarak localStorage'dan tema tercihini al veya koyu mod ile başla
+    return localStorage.getItem('theme') === 'dark' || localStorage.getItem('theme') === null;
+  });
   const [animationClass, setAnimationClass] = useState('');
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); // Tema tercihine göre localStorage güncelle
   }, [isDarkMode]);
 
   useEffect(() => {
