@@ -11,18 +11,18 @@ const DayComponent = ({ data, animationClass }) => (
         <Coffee className="meal-icon" /> Kahvaltı
       </h3>
       <p className="meal-text">{data.kahvalti.ana_urun}</p>
-      <p className="meal-text">Kahvaltılık: {data.kahvalti.kahvaltilik.join(', ')}</p>
-      <p className="drink-text">İçecek: {data.kahvalti.icecek}</p>
+      <p className="meal-text">{data.kahvalti.kahvaltilik.join(', ')}</p>
+      <p className="drink-text">{data.kahvalti.icecek}</p>
       <p className="meal-text">{data.kahvalti.ekmek}, {data.kahvalti.su}</p>
     </div>
     <div className="meal-section">
       <h3 className="meal-title dinner">
         <Utensils className="meal-icon" /> Öğle/Akşam Yemeği
       </h3>
-      <p className="meal-text">Çorba: {data.ogle_aksam.corba}</p>
-      <p className="meal-text">Ana Yemek: {data.ogle_aksam.ana_yemek}</p>
-      <p className="meal-text">Yardımcı Yemek: {data.ogle_aksam.yardimci_yemek}</p>
-      <p className="meal-text">Ek: {data.ogle_aksam.ek}</p>
+      <p className="meal-text">{data.ogle_aksam.corba}</p>
+      <p className="meal-text">{data.ogle_aksam.ana_yemek}</p>
+      <p className="meal-text">{data.ogle_aksam.yardimci_yemek}</p>
+      <p className="meal-text">{data.ogle_aksam.ek}</p>
       <p className="meal-text">{data.ogle_aksam.ekmek}, {data.ogle_aksam.su}</p>
     </div>
   </div>
@@ -47,13 +47,11 @@ export default function MobileMealPlanner() {
       .then(data => {
         setMealPlan(data.kasim_2024);
 
-        // Bugünün tarihini al ve veri setindeki tarihle eşleşecek formatı kullan
         const today = new Date();
-        const todayString = `${today.getDate().toString().padStart(2, '0')}/${(today.getMonth() + 1).toString().padStart(2, '0')}/${today.getFullYear()}`;
-        
-        // Bugünün tarihini veri setinde bul ve currentIndex olarak ayarla
+        const todayString = today.toLocaleDateString('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+
         const todayIndex = data.kasim_2024.findIndex(day => day.tarih === todayString);
-        setCurrentIndex(todayIndex >= 0 ? todayIndex : 0); // Bugün yoksa 0. indekse ayarlanır
+        setCurrentIndex(todayIndex >= 0 ? todayIndex : 0);
       })
       .catch(error => console.error('Error fetching meal plan:', error));
   }, []);
@@ -63,9 +61,9 @@ export default function MobileMealPlanner() {
     setTimeout(() => {
       setCurrentIndex((prev) => {
         if (direction === 'next') {
-          return Math.min(prev + 1, currentIndex + 5, mealPlan.length - 1); // Bugünden itibaren 5 gün sonrasına kadar
+          return Math.min(prev + 1, mealPlan.length - 1);
         } else {
-          return Math.max(prev - 1, currentIndex - 5, 0); // Bugünden itibaren 5 gün öncesine kadar
+          return Math.max(prev - 1, 0);
         }
       });
       setAnimationClass(direction === 'next' ? 'slide-in-right' : 'slide-in-left');
@@ -84,7 +82,7 @@ export default function MobileMealPlanner() {
       <div className="theme-toggle" onClick={() => setIsDarkMode(!isDarkMode)}>
         {isDarkMode ? <Sun className="theme-toggle-icon" /> : <Moon className="theme-toggle-icon" />}
       </div>
-      <h1 className="main-title">Günlük Yemek Planı</h1>
+
       <div className="planner-container" {...handlers}>
         {mealPlan.length > 0 && (
           <DayComponent
@@ -97,7 +95,7 @@ export default function MobileMealPlanner() {
         <button
           className="nav-button"
           onClick={() => handleNavigation('prev')}
-          disabled={currentIndex === 0 || currentIndex <= currentIndex - 5}
+          disabled={currentIndex === 0}
         >
           <ChevronLeft className="button-icon" />
           Önceki
@@ -105,15 +103,12 @@ export default function MobileMealPlanner() {
         <button
           className="nav-button"
           onClick={() => handleNavigation('next')}
-          disabled={currentIndex === mealPlan.length - 1 || currentIndex >= currentIndex + 5}
+          disabled={currentIndex === mealPlan.length - 1}
         >
           Sonraki
           <ChevronRight className="button-icon" />
         </button>
       </div>
-      <p className="date-indicator">
-        {mealPlan.length > 0 && `${mealPlan[currentIndex].gun}, ${mealPlan[currentIndex].tarih}`}
-      </p>
       <div className="developer-credit">
         <p>Developed by <a href="https://www.linkedin.com/in/batuhanslkmm/">Batuhan SALKIM</a></p>
       </div>
