@@ -90,7 +90,7 @@
       "ogle_aksam": {
         "corba": "Mercimek / Toyga Çorbası",
         "ana_yemek": "İzmir Köfte / Bezelye Yemeği",
-        "yardimci_yemek": "Şehriyeli Pilavı",
+        "yardimci_yemek": "Şehriyeli Pirinç Pilavı",
         "ek": "Çoban Salata",
         "ekmek": "Çeyrek Ekmek",
         "su": "500ml Su"
@@ -532,7 +532,7 @@
       "tarih": "23.11.2024",
       "gun": "Cumartesi",
       "kahvalti": {
-        "ana_urun": "Patates Kızartması veya Patates Salatası",
+        "ana_urun": "Patates kavurması veya Patates Salatası",
         "ana_urun2": "Haşlanmış Yumurta",
         "kahvaltilik": [
           "Beyaz Peynir",
@@ -633,9 +633,7 @@
         "kahvaltilik": [
           "Krem Peynir",
           "Siyah/Yeşil Zeytin",
-          "Reçel Çeşitleri",
-          "Reçel",
-          "Tereyağı"
+          "Reçel Çeşitleri"
         ],
         "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
