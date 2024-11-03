@@ -40,7 +40,12 @@ body, html {
   box-sizing: border-box;
   overflow: hidden;
 }
-
+.alert-message {
+  color: #dc2626; /* Kırmızı renk */
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+}
 .main-title {
   font-size: 1.75rem;
   font-weight: bold;
