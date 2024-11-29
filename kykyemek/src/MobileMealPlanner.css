@@ -261,3 +261,21 @@ body, html {
 .slide-out-right {
   animation: slideOutRight 0.5s ease forwards;
 }
+.maintenance-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: black;
+}
+
+.maintenance-message h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.maintenance-message p {
+  font-size: 1.2rem;
+}
