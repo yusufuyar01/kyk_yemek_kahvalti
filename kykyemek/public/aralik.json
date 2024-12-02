@@ -26,7 +26,7 @@
     },
     {
       "tarih": "02.12.2024",
-      "gun": "Pazar",
+      "gun": "Pazartesi",
       "kahvalti": {
         "ana_urun": "Peynirli Omlet",
         "ana_urun2": "Simit",
@@ -50,7 +50,7 @@
     },
     {
       "tarih": "03.12.2024",
-      "gun": "Pazartesi",
+      "gun": "Salı",
       "kahvalti": {
         "ana_urun": "Karışık Kızartma",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -74,7 +74,7 @@
     },
     {
       "tarih": "04.12.2024",
-      "gun": "Salı",
+      "gun": "Çarşamba",
       "kahvalti": {
         "ana_urun": "Sade Omlet",
         "ana_urun2": "Peynirli Milföy Börek",
@@ -98,7 +98,7 @@
     },
     {
       "tarih": "05.12.2024",
-      "gun": "Çarşamba",
+      "gun": "Perşembe",
       "kahvalti": {
         "ana_urun": "Sosis Kokteyl (Salçalı veya Kızartma)",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -118,7 +118,7 @@
     },
     {
       "tarih": "06.12.2024",
-      "gun": "Perşembe",
+      "gun": "Cuma",
       "kahvalti": {
         "ana_urun": "Menemen",
         "ana_urun2": "Lokma",
@@ -138,7 +138,7 @@
     },
     {
       "tarih": "07.12.2024",
-      "gun": "Cuma",
+      "gun": "Cumartesi",
       "kahvalti": {
         "ana_urun": "Patates Kızartması",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -274,7 +274,7 @@
     },
     {
       "tarih": "13.12.2024",
-      "gun": "Perşembe",
+      "gun": "Cuma",
       "kahvalti": {
         "ana_urun": "Zeytinli Açma",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -523,7 +523,7 @@
     },
     {
       "tarih": "24.12.2024",
-      "gun": "Çarşamba",
+      "gun": "Salı",
       "kahvalti": {
         "ana_urun": "Peynirli Omlet",
         "ana_urun2": "Zeytinli Açma",
@@ -563,7 +563,7 @@
     },
     {
       "tarih": "26.12.2024",
-      "gun": "Çarşamba",
+      "gun": "Perşembe",
       "kahvalti": {
         "ana_urun": "Patatesli Yumurta",
         "ana_urun2": "Sade Poğaça",
@@ -587,7 +587,7 @@
     },
     {
       "tarih": "27.12.2024",
-      "gun": "Çarşamba",
+      "gun": "Cuma",
       "kahvalti": {
         "ana_urun": "Sosis Kokteyl (Salçalı veya Kızartma)",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -636,7 +636,7 @@
     },
     {
       "tarih": "29.12.2024",
-      "gun": "Çarşamba",
+      "gun": "Pazar",
       "kahvalti": {
         "ana_urun": "Patates Kızartması",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -656,7 +656,7 @@
     },
     {
       "tarih": "30.12.2024",
-      "gun": "Çarşamba",
+      "gun": "Pazartes",
       "kahvalti": {
         "ana_urun": "Sucuklu Yumurta",
         "ana_urun2": "Simit",

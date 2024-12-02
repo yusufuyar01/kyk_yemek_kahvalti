@@ -73,7 +73,7 @@ export default function MobileMealPlanner() {
 
   // Verileri çekmek için useEffect
   useEffect(() => {
-    fetch("/kasimveriler.json")
+    fetch("/aralik.json")
       .then((response) => response.json())
       .then((data) => {
         setMealPlan(data.aralik_2024);
