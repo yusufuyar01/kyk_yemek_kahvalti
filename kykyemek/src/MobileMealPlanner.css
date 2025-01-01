@@ -1,12 +1,17 @@
+/* Tüm ekranı kapsayacak şekilde ayarlar */
 .maintenance-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  width: 100vw; /* Tam genişlik */
+  height: 100vh; /* Tam yükseklik */
+  margin: 0; /* Kenar boşluklarını kaldır */
+  padding: 0; /* İç boşlukları kaldır */
   background-color: #f0f0f0;
   color: #333;
   font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Padding ve border'ı hesaba katar */
 }
 
 .maintenance-message {
