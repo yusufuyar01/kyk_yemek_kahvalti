@@ -285,6 +285,13 @@ body, html {
   font-weight: bold;
   text-align: center;
 },
+.maintenance-submessage {
+  color: red;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
 
 .maintenance-message h2 {
   font-size: 2rem;
