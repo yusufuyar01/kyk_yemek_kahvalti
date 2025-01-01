@@ -17,7 +17,6 @@ body {
   padding: 10px 20px;
   border-radius: 25px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  animation: slide-in 2s ease-in-out infinite;
 }
 
 /* Durum noktası */
@@ -36,6 +35,19 @@ body {
   font-weight: bold;
   color: #333;
   white-space: nowrap;
+  display: flex;
+}
+
+/* Hareketli metin */
+.moving-text {
+  animation: slide-in 6s linear infinite; /* Hız 6 saniyeye ayarlandı */
+  display: inline-block;
+}
+
+/* Sabit metin */
+.fixed-text {
+  color: #ff0000; /* Kırmızı renk */
+  font-weight: normal;
 }
 
 /* Animasyonlar */
