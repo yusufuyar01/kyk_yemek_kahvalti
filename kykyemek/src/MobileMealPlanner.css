@@ -9,57 +9,34 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Durum konteyneri */
+/* Konteyner */
 .status-container {
-  display: flex;
-  align-items: center;
+  text-align: center;
   background-color: #f9fafb;
-  padding: 10px 20px;
-  border-radius: 25px;
+  padding: 20px;
+  border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Durum noktası */
-.status-dot {
-  width: 12px;
-  height: 12px;
-  background-color: #4caf50; /* Yeşil renk */
-  border-radius: 50%;
-  margin-right: 10px;
-  animation: blink 1s infinite;
-}
-
-/* Mesaj stili */
-.status-message {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  white-space: nowrap;
-  display: flex;
+  width: 80%; /* Genişliği ayarlamak için */
+  max-width: 600px;
 }
 
 /* Hareketli metin */
 .moving-text {
-  animation: slide-in 6s linear infinite; /* Hız 6 saniyeye ayarlandı */
-  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  animation: slide-in 6s linear infinite;
 }
 
 /* Sabit metin */
 .fixed-text {
-  color: #ff0000; /* Kırmızı renk */
+  font-size: 18px;
+  color: #ff0000;
   font-weight: normal;
 }
 
-/* Animasyonlar */
-@keyframes blink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
+/* Hareketli metin animasyonu */
 @keyframes slide-in {
   0% {
     transform: translateX(-100%);
