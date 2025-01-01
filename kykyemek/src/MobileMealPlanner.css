@@ -166,7 +166,20 @@ body, html {
 .nav-button svg {
   margin-right: 0.5rem;
 }
-
+.maintenance-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: Arial, sans-serif;
+},
+.maintenance-message {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+},
 .nav-button:hover {
   background-color: #4f46e5;
 }
@@ -262,14 +275,10 @@ body, html {
   animation: slideOutRight 0.5s ease forwards;
 }
 .maintenance-message {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-size: 2rem;
+  font-weight: bold;
   text-align: center;
-  color: black;
-}
+},
 
 .maintenance-message h2 {
   font-size: 2rem;
