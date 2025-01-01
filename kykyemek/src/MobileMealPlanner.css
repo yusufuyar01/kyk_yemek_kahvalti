@@ -12,11 +12,9 @@ body {
 /* Konteyner */
 .status-container {
   text-align: center;
-  background-color: #f9fafb;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 80%; /* Genişliği ayarlamak için */
+  width: 100%; /* Genişliği ayarlamak için */
   max-width: 600px;
 }
 
