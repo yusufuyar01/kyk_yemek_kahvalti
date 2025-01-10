@@ -121,7 +121,7 @@
       }
     },
     {
-      "tarih": "06.01.2025",
+      "tarih": "06.01.2024",
       "gun": "Pazartesi",
       "kahvalti": {
         "ana_urun": "Karışık Pizza",
@@ -191,7 +191,7 @@
         "ana_urun": "Menemen",
         "ana_urun2": "Kaşarlı Milföy Börek",
         "kahvaltilik": ["Beyaz Peynir", "Siyah/Yeşil Zeytin", "Reçel Çeşitleri"],
-        "icecek": "Çay/Bitki Çayı",
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
@@ -215,7 +215,7 @@
           "Siyah/Yeşil Zeytin",
           "Sürülebilir Çikolata"
         ],
-        "icecek": "Çay/Bitki Çayı",
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
@@ -239,7 +239,7 @@
           "Siyah/Yeşil Zeytin",
           "Mevsim Sebzeleri Söğüş (Domates, Salatalık, Biber)"
         ],
-        "icecek": "Çay/Bitki Çayı",
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
@@ -263,7 +263,7 @@
           "Siyah/Yeşil Zeytin",
           "Bal+Tereyağı"
         ],
-        "icecek": "Çay/Bitki Çayı",
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
@@ -287,7 +287,7 @@
           "Siyah/Yeşil Zeytin",
           "Elma"
         ],
-        "icecek": "Çay/Bitki Çayı",
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
@@ -307,7 +307,7 @@
         "ana_urun": "Patates Kızartması",
         "ana_urun2": "Haşlanmış Yumurta",
         "kahvaltilik": ["Kaşar Peynir", "Siyah/Yeşil Zeytin", "Reçel Çeşitleri"],
-        "icecek": "Çay/Bitki Çayı",
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
@@ -331,7 +331,7 @@
           "Siyah/Yeşil Zeytin",
           "Mevsim Sebzeleri Söğüş (Lahana, havuç, turp)"
         ],
-        "icecek": "Çay/Bitki Çayı",
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
@@ -349,22 +349,22 @@
       "tarih": "16.01.2025",
       "gun": "Perşembe",
       "kahvalti": {
-        "ana_urun": "Kaşarlı Omlet",
-        "ana_urun2": "Simit",
+        "ana_urun": "Dere Otlu Poğaça",
+        "ana_urun2": "Haşlanmış Yumurta",
         "kahvaltilik": [
-          "Beyaz Peynir",
-          "Siyah/Yeşil Zeytin",
-          "Mevsim Sebzeleri Söğüş (Lahana, havuç, turp)"
+          "Ekşimikli Peynir",
+          "Sürülebilir Çikolata",
+          "Siyah/Yeşil Zeytin"
         ],
-        "icecek": "Çay/Bitki Çayı",
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Domates/Kremalı Mantar Çorbası",
-        "ana_yemek": "Tavuk Tantuni (Lavaş + domates + soğan)",
-        "yardimci_yemek": "Soslu Spagetti",
-        "ek": "Mevsim Salata",
+        "corba": "Mercimek / Düğün Çorbası",
+        "ana_yemek": "Başamel Soslu Tavuk / Taze Fasulye",
+        "yardimci_yemek": "Sebzeli Bulgur Pilavı",
+        "ek": "Yoğurt",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -373,18 +373,18 @@
       "tarih": "17.12.2024",
       "gun": "Cuma",
       "kahvalti": {
-        "ana_urun": "Sosis Kokteyl (Salçalı veya Kızartma)",
-        "ana_urun2": "Tepsi Böreği (peynirli, patatesli veya ıspanaklı)",
-        "kahvaltilik": ["Kaşar Peynir", "Siyah/Yeşil Zeytin", "Tahinli Pekmez"],
-        "icecek": "Çay/Bitki Çayı",
+        "ana_urun": "Kaşarlı Omlet",
+        "ana_urun2": "Patates Kroket",
+        "kahvaltilik": ["Beyaz Peynir", "Siyah/Yeşil Zeytin", "Tahinli Pekmez"],
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Yayla Çorbası",
-        "ana_yemek": "Çoban Kavurma (%70) / Patates Köftesi (%30)",
-        "yardimci_yemek": "Sebzeli Bulgur Pilavı",
-        "ek": "Çikolatalı Puding",
+        "corba": "Şehrriye / Tavuk Suyu Çorbası",
+        "ana_yemek": "Etsiz Kuru Fasulye / Karışık Kızartma(yoğurt ile)",
+        "yardimci_yemek": "Şehriyeli Pirinç Pilavı",
+        "ek": "Karışık Turşu (susuz) / Kabak Tatlısı (tahin ve cevizli)",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -393,18 +393,18 @@
       "tarih": "18.12.2024",
       "gun": "Cumartesi",
       "kahvalti": {
-        "ana_urun": "Peynirli Omlet",
-        "ana_urun2": "Sade Açma",
-        "kahvaltilik": ["Labne Peynir", "Siyah/Yeşil Zeytin", "Bal Tereyağı"],
-        "icecek": "Çay/Bitki Çayı",
+        "ana_urun": "Simit",
+        "ana_urun2": "Haşlanmış Yumurta",
+        "kahvaltilik": ["Kaşar Peynir", "Siyah/Yeşil Zeytin", "Bal Tereyağı"],
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Arabaşı / Mercimek Çorbası",
-        "ana_yemek": "Patates Püreli Hasan Paşa Köfte + Taze Fasulye",
+        "corba": "Mercimek / Anadolu Çorbası",
+        "ana_yemek": "Tepsi Kebabı(60 g etli + patates püresi) / Bezelye Yemeği",
         "yardimci_yemek": "Arpa Şehriye Pilavı",
-        "ek": "Pembe Sultan",
+        "ek": "Mevsim Salata",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -413,22 +413,22 @@
       "tarih": "19.12.2024",
       "gun": "Pazar",
       "kahvalti": {
-        "ana_urun": "Patates Kızartması",
-        "ana_urun2": "Haşlanmış Yumurta",
+        "ana_urun": "Patatesli Yumurta",
+        "ana_urun2": "Çikolatalı Milföy Börek",
         "kahvaltilik": [
-          "Ekşimikli Biber",
+          "Labne Peynir",
           "Siyah/Yeşil Zeytin",
           "Reçel Çeşitleri"
         ],
-        "icecek": "Çay/Bitki Çayı",
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Sebze Çorbası",
-        "ana_yemek": "Fırında Sebzeli Tavuk / Pırasa Yemeği",
-        "yardimci_yemek": "Peynirli Erişte",
-        "ek": "Mandalina",
+        "corba": "Ezogelin / Yayla Çorbası",
+        "ana_yemek": "Şinitzel (elma dilim patates ile) / Pirinçli Ispanak Yemeği",
+        "yardimci_yemek": "Soslu Spagetti",
+        "ek": "Ayran",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -437,22 +437,22 @@
       "tarih": "20.12.2024",
       "gun": "Cuma",
       "kahvalti": {
-        "ana_urun": "Sucuklu Yumurta",
-        "ana_urun2": "Sade Kek",
+        "ana_urun": "Sosis Kokteyl (Salçalı veya Kızartma)",
+        "ana_urun2": "Lokma",
         "kahvaltilik": [
           "Beyaz Peynir",
           "Siyah/Yeşil Zeytin",
           "Mevsim Sebzeleri Söğüş (Domates, Salatalık, Biber)"
         ],
-        "icecek": "Çay/Bitki Çayı",
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Düğün Çorbası",
-        "ana_yemek": "Barbunya Yemeği / Karışık Kızartma (yoğurtlu)",
-        "yardimci_yemek": "Pirinç Pilavı",
-        "ek": "Mozaik Pasta",
+        "corba": "Nercimek / Toyga Çorbası",
+        "ana_yemek": "Tekirdağ Köftresi (söğüş domates + soğan + biber) / Patates Yemeği",
+        "yardimci_yemek": "Şehriyeli Pirinç Pilavı",
+        "ek": "Havuç Tarator",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -461,22 +461,22 @@
       "tarih": "21.12.2024",
       "gun": "Cumartesi",
       "kahvalti": {
-        "ana_urun": "Dereotlu Poğaça",
-        "ana_urun2": "Haşlanmış Yumurta",
+        "ana_urun": "Sade Omlet",
+        "ana_urun2": "Sade Poğaça",
         "kahvaltilik": [
           "Kaşar Peynir",
           "Siyah/Yeşil Zeytin",
           "Sürülebilir Çikolata"
         ],
-        "icecek": "Çay/Bitki Çayı",
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Tarhana / Tavuksuyu Çorba",
-        "ana_yemek": "İzmir Köfte / Karnabahar Yemeği",
-        "yardimci_yemek": "Makarna",
-        "ek": "Yoğurt",
+        "corba": "Ezogelin / Kremalı Mantar Çorbası",
+        "ana_yemek": "Tavuk Sote / Tepsi Kumpir",
+        "yardimci_yemek": "Yoğurtlu Makarna",
+        "ek": "Yeşil Salata",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -485,18 +485,18 @@
       "tarih": "22.12.2024",
       "gun": "Pazar",
       "kahvalti": {
-        "ana_urun": "Sade Omlet",
-        "ana_urun2": "Patates Kroket",
-        "kahvaltilik": ["Beyaz Peynir", "Siyah/Yeşil Zeytin", "Elma"],
+        "ana_urun": "Karışık Pizza",
+        "ana_urun2": "Haşlanmış Yumurta",
+        "kahvaltilik": ["Beyaz Peynir", "Siyah/Yeşil Zeytin", "Reçel Çeşitleri"],
         "icecek": "Çay/Bitki Çayı",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Anadolu Çorbası",
-        "ana_yemek": "Çıtır Tavuk + Elma Dilim Patates / Ispanak (yoğurtlu)",
-        "yardimci_yemek": "Bulgur Pilavı",
-        "ek": "Yeşil Salata",
+        "corba": "Mercimek / Arabaşı Çorbası",
+        "ana_yemek": "Etsiz Nohut Yemeği/ Karışık Dolma",
+        "yardimci_yemek": "Arpa Şehriye Pilavı",
+        "ek": "Yoğurt - Revani",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -505,22 +505,22 @@
       "tarih": "23.12.2024",
       "gun": "Pazartesi",
       "kahvalti": {
-        "ana_urun": "Patates Kızartması",
-        "ana_urun2": "Haşlanmış Yumurta",
+        "ana_urun": "Peynirli Omlet",
+        "ana_urun2": "Simit",
         "kahvaltilik": [
-          "Kaşar Peynir",
+          "Labne Peynir",
           "Siyah/Yeşil Zeytin",
-          "Mevsim Sebzeleri Söğüş (Lahana, havuç, turp)"
+          "Bal + Tereyağı"
         ],
-        "icecek": "Çay/Bitki Çayı",
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Cennet Çorbası",
-        "ana_yemek": "Izgara Köfte (söğüş domates + soğan + biber) / Patates Yemeği",
-        "yardimci_yemek": "Şehriyeli Pirinç Pilavı",
-        "ek": "Ayran",
+        "corba": "Ezogelin / Sebze Çorbası",
+        "ana_yemek": "HasanPaşa Köfte (patates püresi ile) / mevsim Türlü",
+        "yardimci_yemek": "Peynirli Makarna",
+        "ek": "Portakal",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -529,18 +529,18 @@
       "tarih": "24.12.2024",
       "gun": "Salı",
       "kahvalti": {
-        "ana_urun": "Peynirli Omlet",
-        "ana_urun2": "Zeytinli Açma",
-        "kahvaltilik": ["Krem Peynir", "Siyah/Yeşil Zeytin", "Reçel Çeşitleri"],
-        "icecek": "Çay/Bitki Çayı",
+        "ana_urun": "Patates Kızartması",
+        "ana_urun2": "Haşlanmış Yumurta",
+        "kahvaltilik": ["Ekşimikli Peynir", "Siyah/Yeşil Zeytin", "Helva"],
+        "icecek": "Çay",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Kremalı Mantar Çorbası",
-        "ana_yemek": "Köri Soslu Tavuk / Karışık Dolma (yoğurtlu)",
-        "yardimci_yemek": "Salçalı Makarna",
-        "ek": "Şekerpare",
+        "corba": "Mercimek / Yayla Çorbası",
+        "ana_yemek": "Çıtır Tavuk (elma dilim patates ile) / Mücver (yoğurt)",
+        "yardimci_yemek": "Şehriyeli Bulgur Pilavı",
+        "ek": "Islak Kek",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -549,18 +549,18 @@
       "tarih": "25.12.2024",
       "gun": "Çarşamba",
       "kahvalti": {
-        "ana_urun": "Karışık Pizza",
-        "ana_urun2": "Haşlanmış Yumurta",
-        "kahvaltilik": ["Beyaz Peynir", "Siyah/Yeşil Zeytin", "Portakal"],
+        "ana_urun": "Kaşarlı Omlet",
+        "ana_urun2": "Kakaolu Kek",
+        "kahvaltilik": ["Beyaz Peynir", "Siyah/Yeşil Zeytin", "Mevsim Sebzeleri Söğüş (Lahana, havuç, turp)"],
         "icecek": "Çay/Bitki Çayı",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Tavuk Çorbası",
-        "ana_yemek": "Etsiz Nohut / İmambayıldı",
-        "yardimci_yemek": "Bulgur Pilavı",
-        "ek": "Yoğurt",
+        "corba": "Ezogelin / Tavuk Suyu Çorbası",
+        "ana_yemek": "Tas Kebabı / Karışık sebze Graten",
+        "yardimci_yemek": "Garnitürlü Pirinç Pilavı",
+        "ek": "Mercimek Köftesi",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -569,22 +569,22 @@
       "tarih": "26.12.2024",
       "gun": "Perşembe",
       "kahvalti": {
-        "ana_urun": "Patatesli Yumurta",
-        "ana_urun2": "Sade Poğaça",
+        "ana_urun": "Dere Otlu Poğaça",
+        "ana_urun2": "Haşlanmış Yumurta",
         "kahvaltilik": [
           "Kaşar Peynir",
           "Siyah/Yeşil Zeytin",
-          "Sürülebilir Çikolata"
+          "Muz"
         ],
         "icecek": "Çay/Bitki Çayı",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Şehriye / Mercimek Çorbası",
-        "ana_yemek": "Sulu Köfte / Mücver + Yoğurt",
-        "yardimci_yemek": "Spageti Napoliten",
-        "ek": "Havuç-turp Salata",
+        "corba": "Mercimek / Şehriye Çorbası",
+        "ana_yemek": "Köri Soslu Tavuk / Patates Yemeği",
+        "yardimci_yemek": "Sade Makarna",
+        "ek": "Yeşil Salata",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -593,22 +593,22 @@
       "tarih": "27.12.2024",
       "gun": "Cuma",
       "kahvalti": {
-        "ana_urun": "Sosis Kokteyl (Salçalı veya Kızartma)",
-        "ana_urun2": "Haşlanmış Yumurta",
+        "ana_urun": "Sade Omlet",
+        "ana_urun2": "Zeytinli Açma",
         "kahvaltilik": [
-          "Ekşimikli Biber",
+          "Beyaz Biber",
           "Siyah/Yeşil Zeytin",
-          "Reçel Çeşitleri"
+          "Bal + Tereyağı"
         ],
         "icecek": "Çay/Bitki Çayı",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Toyga Çorbası",
-        "ana_yemek": "Izgara tavuk + Patates Kızartması/ Mevsim Türlü",
-        "yardimci_yemek": "Mısırlı Pirinç Pilavı",
-        "ek": "Çiğköfte",
+        "corba": "Ezogelin / Cennet Çorbası",
+        "ana_yemek": "Ekşili Köfte / Taze Fasulye",
+        "yardimci_yemek": "Arpa Şehriye Pilavı",
+        "ek": "Yoğurt",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -618,22 +618,22 @@
       "tarih": "28.12.2024",
       "gun": "Cumartesi",
       "kahvalti": {
-        "ana_urun": "Kaşarlı Omlet",
-        "ana_urun2": "Çikolatalı Milföy Börek",
+        "ana_urun": "Patates Kızartması",
+        "ana_urun2": "Haşlanmış Yumurta",
         "kahvaltilik": [
-          "Beyaz Peynir",
+          "Kaşar Peynir",
           "Siyah/Yeşil Zeytin",
-          "Mevsim Sebzeleri Söğüş (Domates, Salatalık, Biber)"
+          "Tahinli Pekmez"
         ],
         "icecek": "Çay/Bitki Çayı",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Yoğurt Çorbası",
-        "ana_yemek": "Et Sote / Barbunya Yemeği",
-        "yardimci_yemek": "Salçalı Bulgur Pilavı",
-        "ek": "Kabak Tatlısı (Tahin + Ceviz)",
+        "corba": "Mercimek / Yayla Çorbası",
+        "ana_yemek": "Tavuk Şiş(elma dilim patates)/ Kapuska yemeği",
+        "yardimci_yemek": "Salçalı Makarna",
+        "ek": "Ege Salata (top peynirle)",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -642,18 +642,18 @@
       "tarih": "29.12.2024",
       "gun": "Pazar",
       "kahvalti": {
-        "ana_urun": "Patates Kızartması",
-        "ana_urun2": "Haşlanmış Yumurta",
-        "kahvaltilik": ["Kaşar Peynir", "Siyah/Yeşil Zeytin", "Tahinli Pekmez"],
+        "ana_urun": "Sucuklu Yumurta",
+        "ana_urun2": "Çikolatalı Milföy Börek",
+        "kahvaltilik": ["Beyaz Peynir", "Siyah/Yeşil Zeytin", "Portakal"],
         "icecek": "Çay/Bitki Çayı",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Domates / Sebze Çorbası",
-        "ana_yemek": "Tavuklu Elbasan Tava / Bezelye Yemeği",
-        "yardimci_yemek": "Soslu Makarna",
-        "ek": "Yeşil Salata",
+        "corba": "Ezogelin / Anadolu Çorbası",
+        "ana_yemek": "Et Sote / Beşamel Soslu Patates",
+        "yardimci_yemek": "Bulgur Pilavı",
+        "ek": "Baklava-Kadayıf(Cevizli)",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -662,18 +662,18 @@
       "tarih": "30.12.2024",
       "gun": "Pazartes",
       "kahvalti": {
-        "ana_urun": "Sucuklu Yumurta",
-        "ana_urun2": "Simit",
-        "kahvaltilik": ["Beyaz Peynir", "Siyah/Yeşil Zeytin", "Bal Tereyağı"],
+        "ana_urun": "Patates Kavurması veya Patates Salatası",
+        "ana_urun2": "Haşlanmış Yumurta",
+        "kahvaltilik": ["Ekşimikli Peynir", "Siyah/Yeşil Zeytin", "Reçel Çeşitleri"],
         "icecek": "Çay/Bitki Çayı",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Şehriyeli Tavuk Çorbası",
-        "ana_yemek": "İzmir Köfte / Taze Fasulye",
+        "corba": "Mercimek / Cennet Çorbası",
+        "ana_yemek": "Tavuk Fajita / Yeşil Mercimek Yemeği",
         "yardimci_yemek": "Şehriyeli Pirinç Pilavı",
-        "ek": "Keşkül",
+        "ek": "Haydari",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -682,22 +682,22 @@
       "tarih": "31.12.2024",
       "gun": "Salı",
       "kahvalti": {
-        "ana_urun": "Patates Kavurması veya Patates Salatası",
-        "ana_urun2": "Haşlanmış Yumurta",
+        "ana_urun": "Peynirli Omlet",
+        "ana_urun2": "Simit",
         "kahvaltilik": [
-          "Kaşar Peynir",
+          "Krem Peynir",
           "Siyah/Yeşil Zeytin",
-          "Mevsim Sebzeleri Söğüş (Lahana, havuç, turp)"
+          "Sürülebilir Çikolata"
         ],
         "icecek": "Çay/Bitki Çayı",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Tarhana / Şehriye Çorbası",
-        "ana_yemek": "Tavuk Köfte + Elma Dilim Patates / Karışık Kızartma (yoğurtlu)",
-        "yardimci_yemek": "Arpa Şehriye Pilavı",
-        "ek": "Ayran + Rula Pasta",
+        "corba": "Ezogelin / Tavuk Suyu Çorbası",
+        "ana_yemek": "Tepsi Kebabı(60 g etli + patates püresi) / Bezelye Yemeği",
+        "yardimci_yemek": "Soslu Makarna",
+        "ek": "Elma",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
