@@ -6,6 +6,7 @@ import {
   ChevronRight,
   Coffee,
   Utensils,
+  Home,
   X
 } from "lucide-react";
 import "./MobileMealPlanner.css";
@@ -78,8 +79,32 @@ export default function MobileMealPlanner() {
   const [startIndex, setStartIndex] = useState(0);
   const [animationClass, setAnimationClass] = useState("");
   const [alertMessage, setAlertMessage] = useState("");
-  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState(null);
+  const [isStandalone, setIsStandalone] = useState(false);
+
+  // PWA durumunu kontrol et
+  useEffect(() => {
+    const checkStandalone = () => {
+      const isInStandaloneMode = window.matchMedia('(display-mode: standalone)').matches 
+        || window.navigator.standalone 
+        || document.referrer.includes('android-app://');
+      setIsStandalone(isInStandaloneMode);
+    };
+
+    checkStandalone();
+    window.matchMedia('(display-mode: standalone)').addListener(checkStandalone);
+  }, []);
+
+  // PWA yükleme önerisi için useEffect
+  useEffect(() => {
+    const handler = (e) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+    };
+
+    window.addEventListener('beforeinstallprompt', handler);
+    return () => window.removeEventListener('beforeinstallprompt', handler);
+  }, []);
 
   // Tema ayarı için useEffect
   useEffect(() => {
@@ -174,73 +199,35 @@ export default function MobileMealPlanner() {
     };
   }, []);
 
-  // PWA yükleme önerisi için useEffect
-  useEffect(() => {
-    // Daha önce reddedilmiş mi kontrol et
-    const isPromptDismissed = localStorage.getItem('installPromptDismissed') === 'true';
-    
-    // Eğer daha önce reddedilmemişse
-    if (!isPromptDismissed) {
-      const handler = (e) => {
-        e.preventDefault();
-        setDeferredPrompt(e);
-        
-        // Kullanıcı mobil cihazda mı kontrol et
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        
-        // Eğer mobil cihazda ise ve PWA zaten yüklü değilse
-        if (isMobile && !window.matchMedia('(display-mode: standalone)').matches) {
-          setShowInstallPrompt(true);
-        }
-      };
-
-      window.addEventListener('beforeinstallprompt', handler);
-      return () => window.removeEventListener('beforeinstallprompt', handler);
-    }
-  }, []);
-
   // Ana ekrana ekleme işlevi
   const handleInstall = async () => {
     if (!deferredPrompt) return;
 
     try {
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
+      const result = window.confirm('KYK Yemek uygulamasını ana ekranınıza eklemek ister misiniz?');
       
-      if (outcome === 'accepted') {
-        console.log('Uygulama başarıyla kuruldu');
-      } else {
-        console.log('Kurulum reddedildi');
+      if (result) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        
+        if (outcome === 'accepted') {
+          console.log('Uygulama başarıyla kuruldu');
+          setIsStandalone(true);
+        }
       }
     } catch (error) {
       console.error('Kurulum sırasında hata:', error);
     } finally {
       setDeferredPrompt(null);
-      setShowInstallPrompt(false);
-      localStorage.setItem('installPromptDismissed', 'true');
     }
-  };
-
-  // Öneriyi kapatma işlevi
-  const closeInstallPrompt = () => {
-    setShowInstallPrompt(false);
-    localStorage.setItem('installPromptDismissed', 'true');
   };
 
   return (
     <div className="meal-planner">
-      {showInstallPrompt && (
-        <div className="install-prompt">
-          <button className="close-prompt" onClick={closeInstallPrompt}>
-            <X size={16} />
-          </button>
-          <div className="install-prompt-text">
-            Daha hızlı erişim için uygulamayı ana ekranınıza ekleyin
-          </div>
-          <button className="install-button" onClick={handleInstall}>
-            Ekle
-          </button>
-        </div>
+      {!isStandalone && deferredPrompt && (
+        <button className="install-home-button" onClick={handleInstall}>
+          <Home size={24} />
+        </button>
       )}
       <div className="planner-container" {...handlers}>
         {Array.isArray(mealPlan) && mealPlan.length > 0 && currentIndex >= 0 && mealPlan[currentIndex] ? (
