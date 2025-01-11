@@ -6,10 +6,10 @@ import {
   ChevronRight,
   Coffee,
   Utensils,
-  Sun,
-  Moon,
+  X
 } from "lucide-react";
 import "./MobileMealPlanner.css";
+import { userTracker } from './firebase/userTracker';
 //DayComponent Bileşeni
 const DayComponent = ({ data, animationClass }) => (
   <div className={`day-component ${animationClass}`}>
@@ -76,22 +76,17 @@ export default function MobileMealPlanner() {
   const [mealPlan, setMealPlan] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [startIndex, setStartIndex] = useState(0);
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    return (
-      localStorage.getItem("theme") === "dark" ||
-      localStorage.getItem("theme") === null
-    );
-  });
   const [animationClass, setAnimationClass] = useState("");
   const [alertMessage, setAlertMessage] = useState("");
-  // Tema güncellemesi için useEffect
+  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
+
+  // Tema ayarı için useEffect
   useEffect(() => {
-    document.documentElement.setAttribute(
-      "data-theme",
-      isDarkMode ? "dark" : "light"
-    );
-    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-  }, [isDarkMode]);
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+  }, []);
+
   // Verileri çekmek için useEffect
   useEffect(() => {
     fetch("/aralik.json")
@@ -159,15 +154,94 @@ export default function MobileMealPlanner() {
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   });
+  // Firebase işlemleri için useEffect
+  useEffect(() => {
+    const initializeFirebase = async () => {
+      try {
+        await userTracker.incrementActiveUsers();
+        await userTracker.incrementTotalVisits();
+      } catch (error) {
+        console.error('Firebase işlemleri başlatılamadı:', error);
+      }
+    };
+
+    initializeFirebase();
+
+    return () => {
+      userTracker.decrementActiveUsers().catch(error => {
+        console.error('Aktif kullanıcı sayısı azaltılamadı:', error);
+      });
+    };
+  }, []);
+
+  // PWA yükleme önerisi için useEffect
+  useEffect(() => {
+    // Daha önce reddedilmiş mi kontrol et
+    const isPromptDismissed = localStorage.getItem('installPromptDismissed') === 'true';
+    
+    // Eğer daha önce reddedilmemişse
+    if (!isPromptDismissed) {
+      const handler = (e) => {
+        e.preventDefault();
+        setDeferredPrompt(e);
+        
+        // Kullanıcı mobil cihazda mı kontrol et
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        
+        // Eğer mobil cihazda ise ve PWA zaten yüklü değilse
+        if (isMobile && !window.matchMedia('(display-mode: standalone)').matches) {
+          setShowInstallPrompt(true);
+        }
+      };
+
+      window.addEventListener('beforeinstallprompt', handler);
+      return () => window.removeEventListener('beforeinstallprompt', handler);
+    }
+  }, []);
+
+  // Ana ekrana ekleme işlevi
+  const handleInstall = async () => {
+    if (!deferredPrompt) return;
+
+    try {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      
+      if (outcome === 'accepted') {
+        console.log('Uygulama başarıyla kuruldu');
+      } else {
+        console.log('Kurulum reddedildi');
+      }
+    } catch (error) {
+      console.error('Kurulum sırasında hata:', error);
+    } finally {
+      setDeferredPrompt(null);
+      setShowInstallPrompt(false);
+      localStorage.setItem('installPromptDismissed', 'true');
+    }
+  };
+
+  // Öneriyi kapatma işlevi
+  const closeInstallPrompt = () => {
+    setShowInstallPrompt(false);
+    localStorage.setItem('installPromptDismissed', 'true');
+  };
+
   return (
     <div className="meal-planner">
-      <div className="theme-toggle" onClick={() => setIsDarkMode(!isDarkMode)}>
-        {isDarkMode ? (
-          <Sun className="theme-toggle-icon" />
-        ) : (
-          <Moon className="theme-toggle-icon" />
-        )}
-      </div>
+      {showInstallPrompt && (
+        <div className="install-prompt">
+          <button className="close-prompt" onClick={closeInstallPrompt}>
+            <X size={16} />
+          </button>
+          <div className="install-prompt-text">
+            Daha hızlı erişim için uygulamayı ana ekranınıza ekleyin
+          </div>
+          <button className="install-button" onClick={handleInstall}>
+            Ekle
+          </button>
+        </div>
+      )}
       <div className="planner-container" {...handlers}>
         {Array.isArray(mealPlan) && mealPlan.length > 0 && currentIndex >= 0 && mealPlan[currentIndex] ? (
           <DayComponent
@@ -206,16 +280,14 @@ export default function MobileMealPlanner() {
         </button>
       </div>
       <div className="developer-credit">
-        <p>
-          Developed by{" "}
-          <a target="_blank" href="https://www.linkedin.com/in/batuhanslkmm/">
-            Batuhan Salkım
-          </a>
-          ,{" "}
-          <a target="_blank" href="https://www.linkedin.com/in/ahmetcaliskann/">
-            Ahmet Çalışkan
-          </a>
-        </p>
+        Developed by{" "}
+        <a href="https://www.linkedin.com/in/batuhanslkmm/" target="_blank" rel="noopener noreferrer">
+          Batuhan Salkım
+        </a>
+        {" & "}
+        <a href="https://www.linkedin.com/in/ahmetcaliskann/" target="_blank" rel="noopener noreferrer">
+          Ahmet Çalışkan
+        </a>
       </div>
     </div>
   );
