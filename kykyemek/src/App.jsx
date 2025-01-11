@@ -6,48 +6,104 @@ import {
   ChevronRight,
   Coffee,
   Utensils,
-  Home,
-  X
+  ThumbsUp,
+  ThumbsDown
 } from "lucide-react";
 import "./MobileMealPlanner.css";
 import { userTracker } from './firebase/userTracker';
+import { database } from './firebase/config';
+import { ref, set, onValue } from 'firebase/database';
 //DayComponent Bileşeni
-const DayComponent = ({ data, animationClass }) => (
-  <div className={`day-component ${animationClass}`}>
-    <h2 className="day-title">
-      {data.gun}, {data.tarih}
-    </h2>
-    <div className="meal-section">
-      <h3 className="meal-title breakfast">
-        <Coffee className="meal-icon" /> Kahvaltı
-      </h3>
-      <p className="meal-text">{data.kahvalti.ana_urun}</p>
-      <p className="meal-text">{data.kahvalti.ana_urun2}</p>
-      <p className="meal-text">
-        {Array.isArray(data.kahvalti.kahvaltilik)
-          ? data.kahvalti.kahvaltilik.join(", ")
-          : ""}
-      </p>
-      <p className="drink-text">{data.kahvalti.icecek}</p>
-      <p className="meal-text">
-        {data.kahvalti.ekmek}, {data.kahvalti.su}
-      </p>
+const DayComponent = ({ data, animationClass, onLike, onDislike, likes, dislikes }) => {
+  // Bugünün tarihini al
+  const today = new Date();
+  const todayString = today.toLocaleDateString("tr-TR", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  });
+
+  // Yemek tarihini kontrol et
+  const mealDate = new Date(data.tarih.split('.').reverse().join('-'));
+  const isDatePassed = mealDate <= today;
+
+  return (
+    <div className={`day-component ${animationClass}`}>
+      <h2 className="day-title">
+        {data.gun}, {data.tarih}
+      </h2>
+      <div className="meal-section">
+        <div className="meal-header">
+          <button 
+            className="rating-button like breakfast-rating"
+            onClick={() => onLike(data.tarih, 'breakfast')}
+            disabled={!isDatePassed}
+            title={!isDatePassed ? "Bu tarih henüz gelmedi" : ""}
+          >
+            <ThumbsUp size={20} />
+            <span className="rating-count">{likes[`${data.tarih}_breakfast`] || 0}</span>
+          </button>
+          <h3 className="meal-title breakfast">
+            <Coffee className="meal-icon" /> Kahvaltı
+          </h3>
+          <button 
+            className="rating-button dislike breakfast-rating"
+            onClick={() => onDislike(data.tarih, 'breakfast')}
+            disabled={!isDatePassed}
+            title={!isDatePassed ? "Bu tarih henüz gelmedi" : ""}
+          >
+            <ThumbsDown size={20} />
+            <span className="rating-count">{dislikes[`${data.tarih}_breakfast`] || 0}</span>
+          </button>
+        </div>
+        <p className="meal-text">{data.kahvalti.ana_urun}</p>
+        <p className="meal-text">{data.kahvalti.ana_urun2}</p>
+        <p className="meal-text">
+          {Array.isArray(data.kahvalti.kahvaltilik)
+            ? data.kahvalti.kahvaltilik.join(", ")
+            : ""}
+        </p>
+        <p className="drink-text">{data.kahvalti.icecek}</p>
+        <p className="meal-text">
+          {data.kahvalti.ekmek}, {data.kahvalti.su}
+        </p>
+      </div>
+      <div className="meal-section">
+        <div className="meal-header">
+          <button 
+            className="rating-button like dinner-rating"
+            onClick={() => onLike(data.tarih, 'dinner')}
+            disabled={!isDatePassed}
+            title={!isDatePassed ? "Bu tarih henüz gelmedi" : ""}
+          >
+            <ThumbsUp size={20} />
+            <span className="rating-count">{likes[`${data.tarih}_dinner`] || 0}</span>
+          </button>
+          <h3 className="meal-title dinner">
+            <Utensils className="meal-icon" />
+            Akşam Yemeği
+          </h3>
+          <button 
+            className="rating-button dislike dinner-rating"
+            onClick={() => onDislike(data.tarih, 'dinner')}
+            disabled={!isDatePassed}
+            title={!isDatePassed ? "Bu tarih henüz gelmedi" : ""}
+          >
+            <ThumbsDown size={20} />
+            <span className="rating-count">{dislikes[`${data.tarih}_dinner`] || 0}</span>
+          </button>
+        </div>
+        <p className="meal-text">{data.ogle_aksam.corba}</p>
+        <p className="meal-text">{data.ogle_aksam.ana_yemek}</p>
+        <p className="meal-text">{data.ogle_aksam.yardimci_yemek}</p>
+        <p className="meal-text">{data.ogle_aksam.ek}</p>
+        <p className="meal-text">
+          {data.ogle_aksam.ekmek}, {data.ogle_aksam.su}
+        </p>
+      </div>
     </div>
-    <div className="meal-section">
-      <h3 className="meal-title dinner">
-        <Utensils className="meal-icon" />
-        Akşam Yemeği
-      </h3>
-      <p className="meal-text">{data.ogle_aksam.corba}</p>
-      <p className="meal-text">{data.ogle_aksam.ana_yemek}</p>
-      <p className="meal-text">{data.ogle_aksam.yardimci_yemek}</p>
-      <p className="meal-text">{data.ogle_aksam.ek}</p>
-      <p className="meal-text">
-        {data.ogle_aksam.ekmek}, {data.ogle_aksam.su}
-      </p>
-    </div>
-  </div>
-);
+  );
+};
 
 DayComponent.propTypes = {
   data: PropTypes.shape({
@@ -70,7 +126,11 @@ DayComponent.propTypes = {
       su: PropTypes.string.isRequired
     }).isRequired
   }).isRequired,
-  animationClass: PropTypes.string.isRequired
+  animationClass: PropTypes.string.isRequired,
+  onLike: PropTypes.func.isRequired,
+  onDislike: PropTypes.func.isRequired,
+  likes: PropTypes.object.isRequired,
+  dislikes: PropTypes.object.isRequired
 };
 
 export default function MobileMealPlanner() {
@@ -79,38 +139,84 @@ export default function MobileMealPlanner() {
   const [startIndex, setStartIndex] = useState(0);
   const [animationClass, setAnimationClass] = useState("");
   const [alertMessage, setAlertMessage] = useState("");
-  const [deferredPrompt, setDeferredPrompt] = useState(null);
-  const [isStandalone, setIsStandalone] = useState(false);
-
-  // PWA durumunu kontrol et
-  useEffect(() => {
-    const checkStandalone = () => {
-      const isInStandaloneMode = window.matchMedia('(display-mode: standalone)').matches 
-        || window.navigator.standalone 
-        || document.referrer.includes('android-app://');
-      setIsStandalone(isInStandaloneMode);
-    };
-
-    checkStandalone();
-    window.matchMedia('(display-mode: standalone)').addListener(checkStandalone);
-  }, []);
-
-  // PWA yükleme önerisi için useEffect
-  useEffect(() => {
-    const handler = (e) => {
-      e.preventDefault();
-      setDeferredPrompt(e);
-    };
-
-    window.addEventListener('beforeinstallprompt', handler);
-    return () => window.removeEventListener('beforeinstallprompt', handler);
-  }, []);
+  const [likes, setLikes] = useState({});
+  const [dislikes, setDislikes] = useState({});
 
   // Tema ayarı için useEffect
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", "dark");
     localStorage.setItem("theme", "dark");
   }, []);
+
+  // Beğeni verilerini yükle
+  useEffect(() => {
+    const loadRatings = async () => {
+      try {
+        const likesRef = ref(database, 'ratings/likes');
+        const dislikesRef = ref(database, 'ratings/dislikes');
+        
+        onValue(likesRef, (snapshot) => {
+          setLikes(snapshot.val() || {});
+        });
+        
+        onValue(dislikesRef, (snapshot) => {
+          setDislikes(snapshot.val() || {});
+        });
+      } catch (error) {
+        console.error('Beğeni verileri yüklenemedi:', error);
+      }
+    };
+
+    loadRatings();
+  }, []);
+
+  const handleLike = async (date, meal) => {
+    try {
+      const likesRef = ref(database, `ratings/likes/${date}/${meal}`);
+      const dislikesRef = ref(database, `ratings/dislikes/${date}/${meal}`);
+      
+      // Mevcut beğeni sayılarını al
+      const currentLikes = (likes[`${date}_${meal}`] || 0);
+      const currentDislikes = (dislikes[`${date}_${meal}`] || 0);
+      
+      console.log(`Beğeni ekleniyor: ${date} - ${meal}`);
+      // Beğeni sayısını güncelle
+      await set(likesRef, currentLikes + 1);
+      console.log('Beğeni başarıyla eklendi');
+      
+      // Eğer daha önce dislike yapıldıysa onu azalt
+      if (currentDislikes > 0) {
+        await set(dislikesRef, currentDislikes - 1);
+        console.log('Dislike sayısı azaltıldı');
+      }
+    } catch (error) {
+      console.error('Beğeni eklenirken hata:', error);
+    }
+  };
+
+  const handleDislike = async (date, meal) => {
+    try {
+      const likesRef = ref(database, `ratings/likes/${date}/${meal}`);
+      const dislikesRef = ref(database, `ratings/dislikes/${date}/${meal}`);
+      
+      // Mevcut beğeni sayılarını al
+      const currentLikes = (likes[`${date}_${meal}`] || 0);
+      const currentDislikes = (dislikes[`${date}_${meal}`] || 0);
+      
+      console.log(`Dislike ekleniyor: ${date} - ${meal}`);
+      // Dislike sayısını güncelle
+      await set(dislikesRef, currentDislikes + 1);
+      console.log('Dislike başarıyla eklendi');
+      
+      // Eğer daha önce like yapıldıysa onu azalt
+      if (currentLikes > 0) {
+        await set(likesRef, currentLikes - 1);
+        console.log('Like sayısı azaltıldı');
+      }
+    } catch (error) {
+      console.error('Beğenmeme eklenirken hata:', error);
+    }
+  };
 
   // Verileri çekmek için useEffect
   useEffect(() => {
@@ -199,53 +305,31 @@ export default function MobileMealPlanner() {
     };
   }, []);
 
-  // Ana ekrana ekleme işlevi
-  const handleInstall = async () => {
-    if (!deferredPrompt) return;
-
-    try {
-      const result = window.confirm('KYK Yemek uygulamasını ana ekranınıza eklemek ister misiniz?');
-      
-      if (result) {
-        deferredPrompt.prompt();
-        const { outcome } = await deferredPrompt.userChoice;
-        
-        if (outcome === 'accepted') {
-          console.log('Uygulama başarıyla kuruldu');
-          setIsStandalone(true);
-        }
-      }
-    } catch (error) {
-      console.error('Kurulum sırasında hata:', error);
-    } finally {
-      setDeferredPrompt(null);
-    }
-  };
-
   return (
     <div className="meal-planner">
-      {!isStandalone && deferredPrompt && (
-        <button className="install-home-button" onClick={handleInstall}>
-          <Home size={24} />
-        </button>
-      )}
       <div className="planner-container" {...handlers}>
         {Array.isArray(mealPlan) && mealPlan.length > 0 && currentIndex >= 0 && mealPlan[currentIndex] ? (
-          <DayComponent
-            data={mealPlan[currentIndex]}
-            animationClass={animationClass}
-          />
+          <>
+            <DayComponent
+              data={mealPlan[currentIndex]}
+              animationClass={animationClass}
+              onLike={handleLike}
+              onDislike={handleDislike}
+              likes={likes}
+              dislikes={dislikes}
+            />
+            {alertMessage && (
+              <div className="alert-message">
+                <p>{alertMessage}</p>
+              </div>
+            )}
+          </>
         ) : (
           <div className="error-message">
             <p>Yemek planı yüklenemedi. Lütfen daha sonra tekrar deneyiniz.</p>
           </div>
         )}
       </div>
-      {alertMessage && (
-        <div className="alert-message">
-          <p>{alertMessage}</p>
-        </div>
-      )}
       <div className="navigation-buttons">
         <button
           className="nav-button"

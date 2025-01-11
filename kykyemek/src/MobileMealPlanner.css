@@ -116,14 +116,23 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
+.meal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+}
+
 .meal-title {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   letter-spacing: -0.025em;
+  margin: 0;
+  flex: 1;
 }
 
 .meal-title.breakfast {
@@ -399,13 +408,13 @@ html {
 
 .install-home-button {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 20px;
+  right: 20px;
   background-color: var(--meal-breakfast);
   border: none;
   color: white;
   cursor: pointer;
-  padding: 0.75rem;
+  padding: 12px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -413,7 +422,9 @@ html {
   transition: all 0.2s ease;
   opacity: 0.9;
   box-shadow: 0 2px 8px var(--shadow-color);
-  z-index: 1000;
+  z-index: 9999;
+  width: 56px;
+  height: 56px;
 }
 
 .install-home-button:hover {
@@ -425,4 +436,76 @@ html {
 [data-theme="dark"] .install-home-button {
   background-color: var(--meal-breakfast);
   color: white;
+}
+
+.rating-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+.rating-button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  color: white;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  min-width: 3.5rem;
+}
+
+.rating-button.breakfast-rating.like {
+  background-color: var(--meal-breakfast);
+}
+
+.rating-button.breakfast-rating.dislike {
+  background-color: var(--meal-breakfast);
+  opacity: 0.8;
+}
+
+.rating-button.dinner-rating.like {
+  background-color: var(--meal-dinner);
+}
+
+.rating-button.dinner-rating.dislike {
+  background-color: var(--meal-dinner);
+  opacity: 0.8;
+}
+
+.rating-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  opacity: 1;
+}
+
+.rating-count {
+  font-size: 0.9rem;
+  font-weight: 600;
+  min-width: 1.2rem;
+  text-align: center;
+}
+
+/* Remove install button styles */
+.install-home-button {
+  display: none;
+}
+
+.rating-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.rating-button:disabled:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  opacity: 0.5;
 }
