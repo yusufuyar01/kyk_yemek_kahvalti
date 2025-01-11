@@ -34,27 +34,9 @@ const DayComponent = ({ data, animationClass, onLike, onDislike, likes, dislikes
       </h2>
       <div className="meal-section">
         <div className="meal-header">
-          <button 
-            className="rating-button like breakfast-rating"
-            onClick={() => onLike(data.tarih, 'breakfast')}
-            disabled={!isDatePassed}
-            title={!isDatePassed ? "Bu tarih henüz gelmedi" : ""}
-          >
-            <ThumbsUp size={20} />
-            <span className="rating-count">{likes[`${data.tarih}_breakfast`] || 0}</span>
-          </button>
           <h3 className="meal-title breakfast">
             <Coffee className="meal-icon" /> Kahvaltı
           </h3>
-          <button 
-            className="rating-button dislike breakfast-rating"
-            onClick={() => onDislike(data.tarih, 'breakfast')}
-            disabled={!isDatePassed}
-            title={!isDatePassed ? "Bu tarih henüz gelmedi" : ""}
-          >
-            <ThumbsDown size={20} />
-            <span className="rating-count">{dislikes[`${data.tarih}_breakfast`] || 0}</span>
-          </button>
         </div>
         <p className="meal-text">{data.kahvalti.ana_urun}</p>
         <p className="meal-text">{data.kahvalti.ana_urun2}</p>
@@ -70,28 +52,10 @@ const DayComponent = ({ data, animationClass, onLike, onDislike, likes, dislikes
       </div>
       <div className="meal-section">
         <div className="meal-header">
-          <button 
-            className="rating-button like dinner-rating"
-            onClick={() => onLike(data.tarih, 'dinner')}
-            disabled={!isDatePassed}
-            title={!isDatePassed ? "Bu tarih henüz gelmedi" : ""}
-          >
-            <ThumbsUp size={20} />
-            <span className="rating-count">{likes[`${data.tarih}_dinner`] || 0}</span>
-          </button>
           <h3 className="meal-title dinner">
             <Utensils className="meal-icon" />
             Akşam Yemeği
           </h3>
-          <button 
-            className="rating-button dislike dinner-rating"
-            onClick={() => onDislike(data.tarih, 'dinner')}
-            disabled={!isDatePassed}
-            title={!isDatePassed ? "Bu tarih henüz gelmedi" : ""}
-          >
-            <ThumbsDown size={20} />
-            <span className="rating-count">{dislikes[`${data.tarih}_dinner`] || 0}</span>
-          </button>
         </div>
         <p className="meal-text">{data.ogle_aksam.corba}</p>
         <p className="meal-text">{data.ogle_aksam.ana_yemek}</p>

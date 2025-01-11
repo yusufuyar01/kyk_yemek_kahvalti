@@ -119,28 +119,29 @@ html {
 .meal-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  padding: 0 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--card-bg-color);
+  border-radius: 0.5rem;
 }
 
 .meal-title {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 600;
+  margin: 0;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: -0.025em;
-  margin: 0;
-  flex: 1;
 }
 
-.meal-title.breakfast {
-  color: var(--meal-breakfast);
+.meal-section.breakfast .meal-title {
+  color: #f97316;
 }
 
-.meal-title.dinner {
-  color: var(--meal-dinner);
+.meal-section.dinner .meal-title {
+  color: #22c55e;
 }
 
 .meal-text,
@@ -449,47 +450,40 @@ html {
 .rating-button {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  justify-content: center;
   padding: 0.5rem;
+  background-color: transparent;
+  color: var(--text-color);
   border: none;
   border-radius: 0.5rem;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-weight: 500;
-  color: white;
-  box-shadow: 0 2px 4px var(--shadow-color);
-  min-width: 3.5rem;
+  gap: 0.25rem;
 }
 
-.rating-button.breakfast-rating.like {
-  background-color: var(--meal-breakfast);
-}
-
-.rating-button.breakfast-rating.dislike {
-  background-color: var(--meal-breakfast);
-  opacity: 0.8;
-}
-
-.rating-button.dinner-rating.like {
-  background-color: var(--meal-dinner);
-}
-
-.rating-button.dinner-rating.dislike {
-  background-color: var(--meal-dinner);
-  opacity: 0.8;
-}
-
-.rating-button:hover {
+.rating-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px var(--shadow-color);
-  opacity: 1;
+  opacity: 0.8;
+}
+
+.rating-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.rating-button.like {
+  color: #22c55e;
+}
+
+.rating-button.dislike {
+  color: #ef4444;
 }
 
 .rating-count {
-  font-size: 0.9rem;
-  font-weight: 600;
-  min-width: 1.2rem;
-  text-align: center;
+  font-size: 0.875rem;
+  margin-left: 0.25rem;
 }
 
 /* Remove install button styles */
@@ -497,15 +491,10 @@ html {
   display: none;
 }
 
-.rating-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  transform: none !important;
-  box-shadow: none !important;
+.meal-title.breakfast {
+  color: #e68a49;
 }
 
-.rating-button:disabled:hover {
-  transform: none !important;
-  box-shadow: none !important;
-  opacity: 0.5;
+.meal-title.dinner {
+  color: #4cd080;
 }
