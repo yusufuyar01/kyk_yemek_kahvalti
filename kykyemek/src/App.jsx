@@ -14,7 +14,7 @@ import { userTracker } from './firebase/userTracker';
 import { database } from './firebase/config';
 import { ref, set, onValue } from 'firebase/database';
 
-/*
+
 const DayComponent = ({ data, animationClass, onLike, onDislike, likes, dislikes }) => {
   const today = new Date();
   const todayString = today.toLocaleDateString("tr-TR", {
@@ -317,12 +317,12 @@ export default function MobileMealPlanner() {
     </div>
   );
 }
-*/
 
+/*
 export default function MobileMealPlanner() {
   return (
     <div style={{ display: 'flex',color:"black", justifyContent: 'center', alignItems: 'center', height: '100vh', fontSize: '2rem', fontWeight: 'bold' }}>
       Site Bakıma Alındı
     </div>
   );
-}
+}*\
