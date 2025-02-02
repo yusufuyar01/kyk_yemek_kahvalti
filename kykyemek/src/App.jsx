@@ -318,11 +318,4 @@ export default function MobileMealPlanner() {
   );
 }
 
-/*
-export default function MobileMealPlanner() {
-  return (
-    <div style={{ display: 'flex',color:"black", justifyContent: 'center', alignItems: 'center', height: '100vh', fontSize: '2rem', fontWeight: 'bold' }}>
-      Site Bakıma Alındı
-    </div>
-  );
-}*\
+
