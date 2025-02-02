@@ -182,11 +182,11 @@ export default function MobileMealPlanner() {
         return response.json();
       })
       .then((data) => {
-        if (!data || !data.ocak_2025 || !Array.isArray(data.ocak_2025)) {
+        if (!data || !data.Subat_2025 || !Array.isArray(data.Subat_2025)) {
           throw new Error('Veri formatı geçersiz');
         }
         
-        setMealPlan(data.ocak_2025);
+        setMealPlan(data.Subat_2025);
         
         const today = new Date();
         const todayString = today.toLocaleDateString("tr-TR", {
@@ -195,7 +195,7 @@ export default function MobileMealPlanner() {
           year: "numeric",
         });
 
-        const todayIndex = data.ocak_2025.findIndex(
+        const todayIndex = data.Subat_2025.findIndex(
           (day) => day && day.tarih === todayString
         );
 
