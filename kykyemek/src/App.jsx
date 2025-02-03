@@ -174,40 +174,43 @@ export default function MobileMealPlanner() {
   };
 
   useEffect(() => {
-    fetch("/aralik.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Veri yüklenemedi');
-        }
-        return response.json();
-      })
-      .then((data) => {
-        if (!data || !data.Subat_2025 || !Array.isArray(data.Subat_2025)) {
-          throw new Error('Veri formatı geçersiz');
-        }
-        
-        setMealPlan(data.Subat_2025);
-        
-        const today = new Date();
-        const todayString = today.toLocaleDateString("tr-TR", {
-          day: "2-digit",
-          month: "2-digit",
-          year: "numeric",
-        });
+  fetch("/aralik.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Veri yüklenemedi');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      if (!data || !data.Subat_2025 || !Array.isArray(data.Subat_2025)) {
+        throw new Error('Veri formatı geçersiz');
+      }
 
-        const todayIndex = data.Subat_2025.findIndex(
-          (day) => day && day.tarih === todayString
-        );
+      setMealPlan(data.Subat_2025);
+      
+      // Tarih formatlama
+      const today = new Date();
+      const day = String(today.getDate()).padStart(2, '0');
+      const month = String(today.getMonth() + 1).padStart(2, '0'); // Ocak = 0, Şubat = 1
+      const year = today.getFullYear();
+      const todayString = `${day}.${month}.${year}`;  // "01.02.2025" formatı
 
-        const initialIndex = todayIndex >= 0 ? todayIndex : 0;
-        setCurrentIndex(initialIndex);
-        setStartIndex(initialIndex);
-      })
-      .catch((error) => {
-        console.error("Yemek planı yüklenirken hata oluştu:", error);
-        setMealPlan([]);
-      });
-  }, []);
+      console.log("Bugünün tarihi:", todayString);  // Hata ayıklama için
+
+      const todayIndex = data.Subat_2025.findIndex(
+        (day) => day && day.tarih === todayString
+      );
+
+      const initialIndex = todayIndex >= 0 ? todayIndex : 0;
+      setCurrentIndex(initialIndex);
+      setStartIndex(initialIndex);
+    })
+    .catch((error) => {
+      console.error("Yemek planı yüklenirken hata oluştu:", error);
+      setMealPlan([]);
+    });
+}, []);
+
 
   const handleNavigation = (direction) => {
     setAnimationClass(
