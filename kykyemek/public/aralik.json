@@ -127,7 +127,7 @@
         "ana_urun": "Sade Omlet",
         "ana_urun2": "Peynirli Milföy Börek",
         "kahvaltilik": [
-          "Öegü Peynir",
+          "Örgü Peynir",
           "Siyah/Yeşil Zeytin",
           "Sürülebilir Çikolata"
         ],
@@ -136,10 +136,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Sebze Çorbası",
-        "ana_yemek": "Kuru Fasulye / Yoğurtlu Karışık",
-        "yardimci_yemek": "Kızartma",
-        "ek": "Pirinç Pilavı",
+        "corba": "Ezogelin / Şehriye Çorbası",
+        "ana_yemek": "Tavuk Şiş (Elma dilim patates) / Taze Fasulye",
+        "yardimci_yemek": "Şehriyeli Pirinç Pilavı",
+        "ek": "Havuç Tarator",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -148,22 +148,22 @@
       "tarih": "07.02.2025",
       "gun": "Cuma",
       "kahvalti": {
-        "ana_urun": "Patatesli Börek",
+        "ana_urun": "Dere Otlu Poğaça",
         "ana_urun2": "Haşlanmış Yumurta",
         "kahvaltilik": [
-          "Kaşar Peynir",
+          "Beyaz Peynir",
           "Siyah/Yeşil Zeytin",
-          "Sürülebilir Çikolata"
+          "Bal+Tereyağı"
         ],
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su",
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Yayla Çorbası",
-        "ana_yemek": "Çıtır Tavuk (Patates Püresi ile) / Yoğurtlu Ispanak Yemeği",
-        "yardimci_yemek": "Soslu Spagetti",
-        "ek": "Karışık Salata",
+        "corba": "Mercimek / Düğün Çorbası",
+        "ana_yemek": "Nohut Yemeği / Karnabahar Graten",
+        "yardimci_yemek": "Bulgur Pilavı",
+        "ek": "Yoğurt, Revani",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
