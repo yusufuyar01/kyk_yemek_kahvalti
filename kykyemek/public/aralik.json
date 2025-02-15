@@ -361,7 +361,7 @@
     },
     {
       "tarih": "16.02.2025",
-      "gun": "Perşembe",
+      "gun": "Pazar",
       "kahvalti": {
         "ana_urun": "Sade Omlet",
         "ana_urun2": "Çikolatalı Milföy Börek",
@@ -385,7 +385,7 @@
     },
     {
       "tarih": "17.02.2025",
-      "gun": "Cuma",
+      "gun": "Pazartesi",
       "kahvalti": {
         "ana_urun": "Simit",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -408,7 +408,7 @@
     },
     {
       "tarih": "18.02.2025",
-      "gun": "Cumartesi",
+      "gun": "Salı",
       "kahvalti": {
         "ana_urun": "Patatesli Yumurta",
         "ana_urun2": "Dere Otlu Poğaça",
@@ -428,7 +428,7 @@
     },
     {
       "tarih": "19.02.2025",
-      "gun": "Pazar",
+      "gun": "Çarşamba",
       "kahvalti": {
         "ana_urun": "Peynirli Börek",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -452,7 +452,7 @@
     },
     {
       "tarih": "20.02.2025",
-      "gun": "Cuma",
+      "gun": "Perşembe",
       "kahvalti": {
         "ana_urun": "Sucuklu Yumurta",
         "ana_urun2": "Sade Açma",
@@ -476,7 +476,7 @@
     },
     {
       "tarih": "21.02.2025",
-      "gun": "Cumartesi",
+      "gun": "Cuma",
       "kahvalti": {
         "ana_urun": "Patates Kızartması",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -500,7 +500,7 @@
     },
     {
       "tarih": "22.02.2025",
-      "gun": "Pazar",
+      "gun": "Cumartesi",
       "kahvalti": {
         "ana_urun": "Sade Omlet",
         "ana_urun2": "Mozaik Kek",
@@ -520,7 +520,7 @@
     },
     {
       "tarih": "23.02.2025",
-      "gun": "Pazartesi",
+      "gun": "Pazar",
       "kahvalti": {
         "ana_urun": "Karışık Kızartma",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -544,7 +544,7 @@
     },
     {
       "tarih": "24.02.2025",
-      "gun": "Salı",
+      "gun": "Pazartesi",
       "kahvalti": {
         "ana_urun": "Sade Omlet",
         "ana_urun2": "Dere Otlu Poğaça",
@@ -564,7 +564,7 @@
     },
     {
       "tarih": "25.02.2025",
-      "gun": "Çarşamba",
+      "gun": "Salı",
       "kahvalti": {
         "ana_urun": "Karışık Pizza",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -584,7 +584,7 @@
     },
     {
       "tarih": "26.02.2025",
-      "gun": "Perşembe",
+      "gun": "Çarşamba",
       "kahvalti": {
         "ana_urun": "Kaşarlı Omlet",
         "ana_urun2": "Çikolatalı Milföy Börek",
@@ -608,7 +608,7 @@
     },
     {
       "tarih": "27.02.2025",
-      "gun": "Cuma",
+      "gun": "Perşembe",
       "kahvalti": {
         "ana_urun": "Patates Kızartması",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -633,7 +633,7 @@
 
     {
       "tarih": "28.02.2025",
-      "gun": "Cumartesi",
+      "gun": "Cuma",
       "kahvalti": {
         "ana_urun": "Menemen",
         "ana_urun2": "Simit",
