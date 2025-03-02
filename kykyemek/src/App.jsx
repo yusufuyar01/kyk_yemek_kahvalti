@@ -37,6 +37,7 @@ const DayComponent = ({ data, animationClass, onLike, onDislike, likes, dislikes
             <Coffee className="meal-icon" /> Kahvaltı
           </h3>
         </div>
+        <p className="meal-text">{data.kahvalti.corba}</p>
         <p className="meal-text">{data.kahvalti.ana_urun}</p>
         <p className="meal-text">{data.kahvalti.ana_urun2}</p>
         <p className="meal-text">
@@ -73,6 +74,7 @@ DayComponent.propTypes = {
     gun: PropTypes.string.isRequired,
     tarih: PropTypes.string.isRequired,
     kahvalti: PropTypes.shape({
+      corba: PropTypes.string.isRequired,
       ana_urun: PropTypes.string.isRequired,
       ana_urun2: PropTypes.string.isRequired,
       kahvaltilik: PropTypes.arrayOf(PropTypes.string),
@@ -174,42 +176,42 @@ export default function MobileMealPlanner() {
   };
 
   useEffect(() => {
-  fetch("/aralik.json")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error('Veri yüklenemedi');
-      }
-      return response.json();
-    })
-    .then((data) => {
-      if (!data || !data.Subat_2025 || !Array.isArray(data.Subat_2025)) {
-        throw new Error('Veri formatı geçersiz');
-      }
+    fetch("/aralik.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Veri yüklenemedi');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (!data || !data.Mart_2025 || !Array.isArray(data.Mart_2025)) {
+          throw new Error('Veri formatı geçersiz');
+        }
 
-      setMealPlan(data.Subat_2025);
-      
-      // Tarih formatlama
-      const today = new Date();
-      const day = String(today.getDate()).padStart(2, '0');
-      const month = String(today.getMonth() + 1).padStart(2, '0'); // Ocak = 0, Şubat = 1
-      const year = today.getFullYear();
-      const todayString = `${day}.${month}.${year}`;  // "01.02.2025" formatı
+        setMealPlan(data.Mart_2025);
+        
+        // Tarih formatlama
+        const today = new Date();
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const year = today.getFullYear();
+        const todayString = `${day}.${month}.${year}`;
 
-      console.log("Bugünün tarihi:", todayString);  // Hata ayıklama için
+        console.log("Bugünün tarihi:", todayString);
 
-      const todayIndex = data.Subat_2025.findIndex(
-        (day) => day && day.tarih === todayString
-      );
+        const todayIndex = data.Mart_2025.findIndex(
+          (day) => day && day.tarih === todayString
+        );
 
-      const initialIndex = todayIndex >= 0 ? todayIndex : 0;
-      setCurrentIndex(initialIndex);
-      setStartIndex(initialIndex);
-    })
-    .catch((error) => {
-      console.error("Yemek planı yüklenirken hata oluştu:", error);
-      setMealPlan([]);
-    });
-}, []);
+        const initialIndex = todayIndex >= 0 ? todayIndex : 0;
+        setCurrentIndex(initialIndex);
+        setStartIndex(initialIndex);
+      })
+      .catch((error) => {
+        console.error("Yemek planı yüklenirken hata oluştu:", error);
+        setMealPlan([]);
+      });
+  }, []);
 
 
   const handleNavigation = (direction) => {
@@ -312,9 +314,13 @@ export default function MobileMealPlanner() {
         <a href="https://www.linkedin.com/in/batuhanslkmm/" target="_blank" rel="noopener noreferrer">
           Batuhan Salkım
         </a>
-        {" & "}
+        {" , "}
         <a href="https://www.linkedin.com/in/ahmetcaliskann/" target="_blank" rel="noopener noreferrer">
           Ahmet Çalışkan
+        </a>
+       {" & "}
+        <a href="https://www.linkedin.com/in/yusuf-uyr/" target="_blank" rel="noopener noreferrer">
+          Yusuf Uyar
         </a>
       </div>
     </div>
@@ -322,3 +328,41 @@ export default function MobileMealPlanner() {
 }
 
 
+// export default function MobileMealPlanner() {
+//   return (
+//     <div style={{
+//       display: 'flex',
+//       flexDirection: 'column',
+//       alignItems: 'center',
+//       justifyContent: 'center',
+//       minHeight: '100vh',
+//       minWidth: '100vw',
+//       margin: 0,
+//       padding: 0,
+//       position: 'fixed',
+//       top: 0,
+//       left: 0,
+//       right: 0,
+//       bottom: 0,
+//       backgroundColor: '#1a1a1a',
+//       color: '#ffffff'
+//     }}>
+//       <div style={{
+//         backgroundColor: '#f8d7da',
+//         color: '#721c24',
+//         padding: '1.5rem',
+//         borderRadius: '12px',
+//         width: '85%',
+//         maxWidth: '400px',
+//         margin: '0 auto',
+//         fontWeight: 'bold',
+//         fontSize: 'clamp(1.2rem, 4vw, 1.8rem)',
+//         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+//         textAlign: 'center',
+//         lineHeight: '1.4'
+//       }}>
+//         Hayırlı Ramazanlar!<br />Site Bakımda
+//       </div>
+//     </div>
+//   );
+// }
