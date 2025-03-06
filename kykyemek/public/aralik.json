@@ -133,7 +133,7 @@
         "ana_urun": "Sade Omlet",
         "ana_urun2": "Çikolatalı Milföy Börek",
         "kahvaltilik": [
-          "Trakya çe il Peyniri",
+          "Trakya çeçil Peyniri",
           "Siyah/Yeşil Zeytin",
           "Sürülebilir Çikolata"
         ],
@@ -144,8 +144,8 @@
       "ogle_aksam": {
         "corba": "Tarhana Çorbası",
         "ana_yemek": "Tavuk Şiş (Elma Dilim Patates ile) / Taze Fasulye",
-        "yardimci_yemek": "Şehriyeli Prinç Pilavı",
-        "ek": "Makarna ( Yoğurtlu ) + Yaş Pasta",
+        "yardimci_yemek": "Makarna ( Yoğurtlu )",
+        "ek": "Yaş Pasta",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -210,7 +210,7 @@
         "kahvaltilik": [
           "Beyaz Peynir",
           "Siyah/Yeşil Zeytin",
-          "Bal+Terevağ"
+          "Bal+Tereyağ"
         ],
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su",
@@ -218,7 +218,7 @@
       },
       "ogle_aksam": {
         "corba": "Mercimek Çorbası",
-        "ana_yemek": "Tavuk Tantuni (lavaş/domates-soğan)/Kamabahar Graten",
+        "ana_yemek": "Tavuk Tantuni (lavaş-domates-soğan)/Kamabahar Graten",
         "yardimci_yemek": "Peynirli Makarna",
         "ek": "Ayran",
         "ekmek": "Çeyrek Ekmek",
@@ -269,7 +269,7 @@
       "ogle_aksam": {
         "corba": "Tarhana Çorbası",
         "ana_yemek": "Tavuk Köfte (elma dilim patates) / Nohut Yemeği",
-        "yardimci_yemek": "Nohut Yemeği",
+        "yardimci_yemek": "Sebzeli Bulgun Pilavı",
         "ek": "Haydari",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
@@ -283,7 +283,7 @@
         "ana_urun": "Peynirli Omlet",
         "ana_urun2": "Dere Otlu Poğaça",
         "kahvaltilik": [
-          "Çeçil-Dil örgü Peyniri",
+          "Çeçil-Dil-örgü Peyniri",
           "Siyah/Yeşil Zeytin",
           "Sürülebilir Çikolata"
         ],
@@ -418,7 +418,7 @@
       },
       "ogle_aksam": {
         "corba": "Mercimek Çorbası",
-        "ana_yemek": "Beşamel Soslu Tavuk/ Patates",
+        "ana_yemek": "Beşamel Soslu Tavuk/ Patates Yemeği",
         "yardimci_yemek": "Arpa Şehriye Pilavı",
         "ek": "Yoğurtlu Biber Kızartması  ",
         "ekmek": "Çeyrek Ekmek",
@@ -439,7 +439,7 @@
       },
       "ogle_aksam": {
         "corba": " Kremalı Mantar Çorbası",
-        "ana_yemek": "Rosto Köfte (patates püresi ile) / Kabak Kal e",
+        "ana_yemek": "Rosto Köfte (patates püresi ile) / Kabak Kalye",
         "yardimci_yemek": "Pirinç Pilavı",
         "ek": "Akdeniz Salata + İrmik Helvası",
         "ekmek": "Çeyrek Ekmek",
@@ -569,7 +569,7 @@
       },
       "ogle_aksam": {
         "corba": "Yayla Çorbası",
-        "ana_yemek": "Etli Kuru Fasulye / Karışık Dolma",
+        "ana_yemek": "Etli Kuru Fasulye / Karışık Dolma (Yoğurt)",
         "yardimci_yemek": "Arpa Şehriye Pilavı",
         "ek": "Karışık Turşu (susuz) + Yaş Pasta",
         "ekmek": "Çeyrek Ekmek",
@@ -632,7 +632,7 @@
       },
       "ogle_aksam": {
         "corba": "Tarhana Çorbası",
-        "ana_yemek": "Tavuk Sote / Karışık Kızartma",
+        "ana_yemek": "Tavuk Sote / Karışık Kızartma (soslu)",
         "yardimci_yemek": "Pirinç Pilavı",
         "ek": "Cacık",
         "ekmek": "Çeyrek Ekmek",
