@@ -37,7 +37,6 @@ const DayComponent = ({ data, animationClass, onLike, onDislike, likes, dislikes
             <Coffee className="meal-icon" /> Kahvaltı
           </h3>
         </div>
-        <p className="meal-text">{data.kahvalti.corba}</p>
         <p className="meal-text">{data.kahvalti.ana_urun}</p>
         <p className="meal-text">{data.kahvalti.ana_urun2}</p>
         <p className="meal-text">
