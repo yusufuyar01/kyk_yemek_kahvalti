@@ -40,10 +40,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin Çorbası",
-        "ana_yemek": "Izgara Köfte (patates püresi ile) / Bezelye Yemeği",
-        "yardimci_yemek": "Sade Makarna",
-        "ek": "Ayran",
+        "corba": "Mercimek / Cennet Çorbası",
+        "ana_yemek": "Patlıcan Musakka / Taze Fasulye",
+        "yardimci_yemek": "Bulgur Pilavı",
+        "ek": "Karışık Salata + Haydari",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -64,10 +64,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Kremalı Mantar Çorbası",
-        "ana_yemek": "Tavuk Sote / Yoğurtlu Ispanak Yemeği",
-        "yardimci_yemek": "Bulgur Pilavı",
-        "ek": "Sütlaç",
+        "corba": "Ezogelin / Domates Çorbası",
+        "ana_yemek": "Fırında Sebzeli Tavuk / Mevsim Türlü",
+        "yardimci_yemek": "Şehriyeli Pirinç Pilavı",
+        "ek": "Brownie",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -88,10 +88,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Mercimek Çorbası",
-        "ana_yemek": "İzmir Köfte / Mevsim Türlü",
-        "yardimci_yemek": "Soslu Spagetti",
-        "ek": "Rus Salatası + Portakal",
+        "corba": "Mercimek Tavuk Suyu Çorbası",
+        "ana_yemek": "Kadınbudu Köfte (Patates Püresi) / Pırasa Yemeği",
+        "yardimci_yemek": "Salçalı Makarna",
+        "ek": "Ayran",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -112,10 +112,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Tarhana Çorbası",
-        "ana_yemek": "Tavuk Şiş (Elma Dilim Patates ile) / Taze Fasulye",
-        "yardimci_yemek": "Makarna ( Yoğurtlu )",
-        "ek": "Yaş Pasta",
+        "corba": "Ezogelin / Yayla Çorbası",
+        "ana_yemek": "Tavuk Şiş (Karışık Sebze Kızartma) / Bezelye Yemeği",
+        "yardimci_yemek": "Arpa Şehriye Pilavı",
+        "ek": "Tarator",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -136,10 +136,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Tarhana Çorbası",
-        "ana_yemek": "Tavuk Şiş (Elma Dilim Patates ile) / Taze Fasulye",
-        "yardimci_yemek": "Makarna",
-        "ek": "Yaş Pasta",
+        "corba": "Mercimek / Toyga Çorbası",
+        "ana_yemek": "İzmir Köfte (Fasulye Piyazı) / Yoğurtlu Ispanak",
+        "yardimci_yemek": "Peynirli Makarna",
+        "ek": "Keşkül",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -160,10 +160,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": { 
-        "corba": "Şehriye Çorbası",
-        "ana_yemek": "Izgara Köfte (patates püresi ile) / Karışık Kızartma (yoğurt ile)",
-        "yardimci_yemek": "Arpa Şehriye Pilavı",
-        "ek": "Pembe Sultan",
+        "corba": "Ezogelin / Tarhana Çorbası",
+        "ana_yemek": "Orman Kebabı / Barbunya Yemeği",
+        "yardimci_yemek": "Şehriyeli Bulgur Pilavı",
+        "ek": "Çoban Salata",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -184,10 +184,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Kremalı Sebze Çorbası",
-        "ana_yemek": "Patlıcan Musakka / Patates Yemeği",
-        "yardimci_yemek": "Bulgur Pilavı",
-        "ek": "Cacık + Baklava (Cevizli)",
+        "corba": "Mercimek / Tutmaç Çorbası",
+        "ana_yemek": "Tavuk Kavurma (susuz) / Karışık Kızartma (yoğurtlu)",
+        "yardimci_yemek": "Salçalı Spagetti",
+        "ek": "Çiğköfte",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -208,10 +208,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Mercimek/Yüksük Çorbası",
-        "ana_yemek": "Etsiz Nohut Yemeği / Karışık Dolma",
-        "yardimci_yemek": "Arpa Şehriye Pilavı",
-        "ek": "Çoban Salata + Yoğurt",
+        "corba": "Ezogelin/Tavuk Suyu Çorba",
+        "ana_yemek": "Etsiz Nohut Yemeği / Karışık Dolma + Yoğurt",
+        "yardimci_yemek": "Mantı",
+        "ek": "Şekerpare + Karışık turşu (susuz)",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -232,10 +232,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Şehriyeli Tavuk Çorbası",
-        "ana_yemek": "Tavuk Kavurma (susuz) / Taze Fasülye",
-        "yardimci_yemek": "Salçalı Makarna",
-        "ek": "Keşkül",
+        "corba": "Mercimek / Yüksük Çorbası",
+        "ana_yemek": "Tepsi Kebabı (90g etli, patates püresi ile) / Bezelye Yemeği",
+        "yardimci_yemek": "Pirinç Pilavı",
+        "ek": "Pembe Sultan",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -256,10 +256,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Tarhana Çorbası",
-        "ana_yemek": "İzmir Köfte / Yoğurtlu Ispanak",
-        "yardimci_yemek": "Sebzeli Bulgun Pilavı",
-        "ek": "Bahçe Salata",
+        "corba": "Ezogelin/Kremalı Mantar Çorbası",
+        "ana_yemek": "Tavuk Köfte (domates-soğan-biber) / Yeşil Mercimek Yemeği",
+        "yardimci_yemek": "Spagetti Napoliten",
+        "ek": "Yoğurt",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -280,10 +280,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Domates Çorbası",
-        "ana_yemek": "Çoban Kavurma / Yoğurtlu Karışık Kızartma",
-        "yardimci_yemek": "Nohutlu Pirinç Pilavı",
-        "ek": "Baklava (Cevizli)",
+        "corba": "Mercimek / Arabaşı Çorbası ",
+        "ana_yemek": "Patates Oturtma / Taze Fasulye",
+        "yardimci_yemek": "Sebzeli Bulgur Pilavı ",
+        "ek": "Çikolatalı Pasta",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -304,10 +304,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Anadolu Çorbası",
-        "ana_yemek": "Tavuk Köfte (domates-soğan-biber) / Yeşil Mercimek Yemeği",
-        "yardimci_yemek": "Peynirli Makarna",
-        "ek": "Cacık",
+        "corba": "Ezogelin / Yayla Çorbası",
+        "ana_yemek": "Tavuk Fajita (susuz) / Kabak Mücver + Yoğurt",
+        "yardimci_yemek": "Makarna",
+        "ek": "Akdeniz Salata",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -328,10 +328,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Cennet Çorbası",
-        "ana_yemek": "Patlıcan Musakka / Patates Yemeği",
-        "yardimci_yemek": "Arpa Şehriye Pilavı",
-        "ek": "Şekerpare)",
+        "corba": "Mercimek / Düğün Çorbası",
+        "ana_yemek": "Etsiz Kuru Fasulye / Karışık Kızartma (soslu)",
+        "yardimci_yemek": "Pirinç Pilavı",
+        "ek": "Cevizli Baklava",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -352,10 +352,10 @@
         "icecek": "Çay/Bitki Çayı"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Sebze Çorbası",
-        "ana_yemek": "Beşamel Soslu Tavuk/ Kabak Kalye",
-        "yardimci_yemek": "Bulgur Pilavı",
-        "ek": "Haydari",
+        "corba": "Ezogelin / Sebze Çorbası",
+        "ana_yemek": "Tavuk Tantuni (lavaş+domates-soğan) / İmambayıldı",
+        "yardimci_yemek": "Arpa Şehriye Pilavı",
+        "ek": "Kısır",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -376,10 +376,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Tavuk Suyu Çorbası",
-        "ana_yemek": "Çiftlik Kebabı / Karnabahar Graten",
-        "yardimci_yemek": "Mısırlı Pirinç Pilavı",
-        "ek": "Ayran",
+        "corba": "Mercimek / Şehriye Çorbası",
+        "ana_yemek": "Izgara Köfte (elma dilim patates) / Mantar Sote",
+        "yardimci_yemek": "Soslu Makarna",
+        "ek": "Ege Salata",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -400,10 +400,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Tarhana Çorbası",
-        "ana_yemek": "Tavuk Fajita (susuz) / Mücver (yoğurt ile)",
-        "yardimci_yemek": "Soslu Makarna",
-        "ek": "Ege Salata",
+        "corba": "Ezogelin / Toyga Çorbası",
+        "ana_yemek": "Beşamel Soslu Tavuk / Patates Yemeği",
+        "yardimci_yemek": "Bulgur Pilavı",
+        "ek": "İrmik Helvası",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -420,10 +420,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Düğün Çorbası",
-        "ana_yemek": "Etsiz Kuru Fasülye / Mantar Sote",
-        "yardimci_yemek": "Şehriyeli Pirinç Pilavı",
-        "ek": "Çikolatalı Pasta",
+        "corba": "Mercimek / Domates Çorbası",
+        "ana_yemek": "Et Tantuni (75g et) (lavaş+domates-soğan) / Karışık Dolma 4 yoğurt",
+        "yardimci_yemek": "Arpa Şehriye Pilavı",
+        "ek": "Acılı Ezme",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -440,10 +440,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Toyga Çorbası",
-        "ana_yemek": "Tavuk Tantuni (lavaş+domates-soğan) / İmambayıldı",
-        "yardimci_yemek": "Bulgur Pilavı",
-        "ek": "Yoğurt + Elma",
+        "corba": "Ezogelin / Yayla Çorbası",
+        "ana_yemek": "Çıtır Tavuk (elma dilim patates) / Ispanaklı Graten",
+        "yardimci_yemek": "Salçalı Makarna",
+        "ek": "Cacık",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -460,10 +460,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Tutmaç Çorbası",
-        "ana_yemek": "Ekşili Köfte / Bezelye Yemeği",
-        "yardimci_yemek": "Spagetti",
-        "ek": "Supangle(kek ile)",
+        "corba": "Mercimek/Şehriyeli Tavuk Çorbası",
+        "ana_yemek": "Sulu Köfte / Bezelye Yemeği",
+        "yardimci_yemek": "Şehriyeli Pirinç Pilavı",
+        "ek": "Tarator",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -480,10 +480,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Kremalı Mantar Çorbası",
-        "ana_yemek": "Çıtır Tavuk (elma dilim patates) / Taze Fasülye",
-        "yardimci_yemek": "Pirinç Pilavı",
-        "ek": "Ayran + Akdeniz Salata",
+        "corba": "Ezogelin / Tutmaç Çorbası",
+        "ana_yemek": "Tavuk Şiş (Karışık Kızartma) / Nohut Yemeği",
+        "yardimci_yemek": "Soslu Makarna",
+        "ek": "Şekerpare",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -500,10 +500,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Şehriye Çorbası",
-        "ana_yemek": "Tepsi Kebabı (90g etli, patates püresi ile) / Pırasa Yemeği",
-        "yardimci_yemek": "Arpa Şehriye Pilavı",
-        "ek": "Kısır",
+        "corba": "Mercimek / Cennet Çorbası",
+        "ana_yemek": "Tas Kebabı / Kabak Mücver (yoğurt ile)",
+        "yardimci_yemek": "Bulgur Pilavı",
+        "ek": "Karışık Salata",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -520,10 +520,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-          "corba": "Mercimek / Domates Çorbası",
-        "ana_yemek": "Fırında Sebzeli Tavuk / Mevsim Türlü",
+        "corba": "Ezogelin / Yayla Çorbası",
+        "ana_yemek": "Kadınbudu Köfte (Patates Püresi Yoğurtlu Ispanak)",
         "yardimci_yemek": "Peynirli Makarna",
-        "ek": "İrmik Helvası",
+        "ek": "Kısır",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -540,10 +540,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Yayla Çorbası",
-        "ana_yemek": "Etsiz Nohut Yemeği / Soslu Karışık Kızartma",
-        "yardimci_yemek": "Bulgur Pilavı",
-        "ek": "Çoban Salata",
+        "corba": "Mercimek / Yüksük Çorbası",
+        "ana_yemek": "Tavuk Kavurma (susuz) / Karışık Sebze Graten",
+        "yardimci_yemek": "Mantı",
+        "ek": "Supangle(kek ile)",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -560,10 +560,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Şehriye Çorbası",
-        "ana_yemek": "Et Tantuni (lavaş+domates-soğan) / Mücver (yoğurt ile)",
-        "yardimci_yemek": "Şehriyeli Pirinç Pilavı",
-        "ek": "Acılı Ezme",
+        "corba": "Ezogelin/ Tavuk Suyu Çorbası",
+        "ana_yemek": "Etsiz Kurufasulye / Soslu Karışık Kızartma",
+        "yardimci_yemek": "Pirinç Pilavı",
+        "ek": "Çoban Salata + Yogurt",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -580,10 +580,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Tavuk Suyu Çorbası",
-        "ana_yemek": "Rosto Köfte (patates püresi ile) / Barbunya Yemeği",
-        "yardimci_yemek": "Salçalı Makarna",
-        "ek": "Kemalpaşa",
+        "corba": "Mercimek / Domates Çorbası",
+        "ana_yemek": "Ekşili Köfte / Karışık Dolma + Yoğurt",
+        "yardimci_yemek": "Peynirli Makarna",
+        "ek": "Yoğurtlu Semizotu",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -600,10 +600,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Anadolu Çorbası",
-        "ana_yemek": "Kremalı Mantarlı Tavuk / Karışık Sebze Graten",
+        "corba": "Ezogelin / Toyga Çorbası",
+        "ana_yemek": "Tavuk Tantuni (lavaş+domates-soğan) / Patates Köftesi",
         "yardimci_yemek": "Şehriyeli Bulgur Pilavı",
-        "ek": "Ege Salata",
+        "ek": "Mozaik Pasta",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -620,10 +620,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Düğün Çorbası",
-        "ana_yemek": "Etsiz Nohut Yemeği / Karışık Dolma(yoğurt ile)",
-        "yardimci_yemek": "Arpa Şehriye Pilavı",
-        "ek": "Baklava (Cevizli)",
+        "corba": "Mercimek / Arabaşl Çorbası",
+        "ana_yemek": "Bahçivan Kebabı / Taze Fasulye",
+        "yardimci_yemek": "Mısırlı Pirinç Pilavı",
+        "ek": "Cacık",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -640,10 +640,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Domates Çorbası",
-        "ana_yemek": "Tavuk Şiş (Elma Dilim Patates ile) / Bezelye Yemeği",
-        "yardimci_yemek": "Soslu Makarna",
-        "ek": "Havuç Tarator",
+        "corba": "Ezogelin / Sebze Çorbası",
+        "ana_yemek": "Tepsi Kebabı (90g etli, patates püresi ile) / Mantar Sote",
+        "yardimci_yemek": "Spagetti Napoliten",
+        "ek": "Ayran",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -660,10 +660,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Cennet Çorbası",
-        "ana_yemek": "Patlıcan Musakka / Patates Köftesi(Yoğurt ile)",
-        "yardimci_yemek": "Şehriyeli Pirinç Pilavı",
-        "ek": "Çikolatalı Puding",
+        "corba": "Mercimek / Şehriye Çorbası",
+        "ana_yemek": "Tavuk Fajita (susuz) / Kabak Mücver + Yoğurt",
+        "yardimci_yemek": "Arpa Şehriye Pilavı",
+        "ek": "Pembe Sultan",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
@@ -680,10 +680,10 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Mercimek / Cennet Çorbası",
-        "ana_yemek": "Patlıcan Musakka / Patates Köftesi(Yoğurt ile)",
-        "yardimci_yemek": "Şehriyeli Pirinç Pilavı",
-        "ek": "Çikolatalı Puding",
+        "corba": "Ezogelin/Kremalı Tavuk Çorbası",
+        "ana_yemek": "Etsiz Nohut Yemeği / Karışık Kızartma",
+        "yardimci_yemek": "Pirinç Pilavı",
+        "ek": "Kemalpaşa",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
