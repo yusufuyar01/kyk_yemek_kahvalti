@@ -183,11 +183,11 @@ export default function MobileMealPlanner() {
         return response.json();
       })
       .then((data) => {
-        if (!data || !data.Nisan_2025 || !Array.isArray(data.Nisan_2025)) {
+        if (!data || !data.Mayis_2025 || !Array.isArray(data.Mayis_2025)) {
           throw new Error('Veri formatı geçersiz');
         }
 
-        setMealPlan(data.Nisan_2025);
+        setMealPlan(data.Mayis_2025);
         
         // Tarih formatlama
         const today = new Date();
@@ -198,7 +198,7 @@ export default function MobileMealPlanner() {
 
         console.log("Bugünün tarihi:", todayString);
 
-        const todayIndex = data.Nisan_2025.findIndex(
+        const todayIndex = data.Mayis_2025.findIndex(
           (day) => day && day.tarih === todayString
         );
 
