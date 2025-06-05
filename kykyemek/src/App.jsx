@@ -34,7 +34,7 @@ function App() {
         lineHeight: '1.4'
       }}>
         Eylül ayında yurt yemek listesine ek olarak<br />
-        üniversite yemekleri ve anlık yurt otobüs saati<br />
+        üniversite yemekleri ve otobüs saati<br />
         gösterimi ile beraber tekrar aktif olacaktır.<br /><br />
         <strong>İYİ TATİLER</strong>
       </div>
