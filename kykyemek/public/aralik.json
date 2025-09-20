@@ -470,7 +470,7 @@
     },
     {
       "tarih": "21.05.2025",
-      "gun": "Pazar",
+      "gun": "Çarşamba",
       "kahvalti": {
         "ana_urun": "Patatesli Yumurta",
         "ana_urun2": "Sade Poğaça",
@@ -480,7 +480,7 @@
         "su": "500 ml Su"
       },
       "ogle_aksam": {
-        "corba": "Ezogelin / Yayla Çorbası",
+        "corba": "Ezogelin / Tutmaç Çorbası",
         "ana_yemek": "Tavuk Şiş (Karışık Kızartma) / Nohut Yemeği",
         "yardimci_yemek": "Soslu Makarna",
         "ek": "Şekerpare",
@@ -490,7 +490,7 @@
     },
     {
       "tarih": "22.05.2025",
-      "gun": "Pazartesi",
+      "gun": "Perşembe",
       "kahvalti": {
         "ana_urun": "Zeytinli/Peynirli Açma",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -510,7 +510,7 @@
     },
     {
       "tarih": "23.05.2025",
-      "gun": "Salı",
+      "gun": "Cuma",
       "kahvalti": {
         "ana_urun": "Sade Omlet",
         "ana_urun2": "Çikolatalı Milföy Börek",
@@ -530,7 +530,7 @@
     },
     {
       "tarih": "24.05.2025",
-      "gun": "Çarşamba",
+      "gun": "Cumartesi",
       "kahvalti": {
         "ana_urun": "Patates Kızartması",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -550,7 +550,7 @@
     },
     {
       "tarih": "25.05.2025",
-      "gun": "Perşembe",
+      "gun": "Pazar",
       "kahvalti": {
         "ana_urun": "Menemen",
         "ana_urun2": "Dere Otlu Poğaça",
@@ -570,7 +570,7 @@
     },
     {
       "tarih": "26.05.2025",
-      "gun": "Cuma",
+      "gun": "Pazartesi",
       "kahvalti": {
         "ana_urun": "Simit",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -590,7 +590,7 @@
     },
     {
       "tarih": "27.05.2025",
-      "gun": "Cumartesi",
+      "gun": "Salı",
       "kahvalti": {
         "ana_urun": "Peynirli Omlet",
         "ana_urun2": "Meyveli Kek",
@@ -610,7 +610,7 @@
     },
     {
       "tarih": "28.05.2025",
-      "gun": "Pazar",
+      "gun": "Çarşamba",
       "kahvalti": {
         "ana_urun": "Patates Kızartması",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -630,7 +630,7 @@
     },
     {
       "tarih": "29.05.2025",
-      "gun": "Pazartesi",
+      "gun": "Perşembe",
       "kahvalti": {
         "ana_urun": "Kaşarlı Omlet",
         "ana_urun2": "Sade Açma",
@@ -650,7 +650,7 @@
     },
     {
       "tarih": "30.05.2025",
-      "gun": "Salı",
+      "gun": "Cuma",
       "kahvalti": {
         "ana_urun": "Patatesli Börek",
         "ana_urun2": "Haşlanmış Yumurta",
@@ -668,24 +668,24 @@
         "su": "500 ml Su"
       }
     },
-    // {
-    //   "tarih": "31.05.2025",
-    //   "gun": "Cumartesi",
-    //   "kahvalti": {
-    //     "ana_urun": "Sade Omlet",
-    //     "ana_urun2": "Dere Otlu Poğaça",
-    //     "kahvaltilik": ["Kaşar Peynir", "Siyah/Yeşil Zeytin", "Sürülebilir Çikolata"],
-    //     "icecek": "Çay/Bitki Çayı",
-    //     "ekmek": "Çeyrek Ekmek",
-    //     "su": "500 ml Su"
-    //   },
-    //   "ogle_aksam": {
-    //     "corba": "Ezogelin/Kremalı Tavuk Çorbası",
-    //     "ana_yemek": "Etsiz Nohut Yemeği / Karışık Kızartma",
-    //     "yardimci_yemek": "Pirinç Pilavı",
-    //     "ek": "Kemalpaşa",
-    //     "ekmek": "Çeyrek Ekmek",
-    //     "su": "500 ml Su"
-    //   }
-    // }
+    {
+      "tarih": "31.05.2025",
+      "gun": "Cumartesi",
+      "kahvalti": {
+        "ana_urun": "Sade Omlet",
+        "ana_urun2": "Dere Otlu Poğaça",
+        "kahvaltilik": ["Kaşar Peynir", "Siyah/Yeşil Zeytin", "Sürülebilir Çikolata"],
+        "icecek": "Çay/Bitki Çayı",
+        "ekmek": "Çeyrek Ekmek",
+        "su": "500 ml Su"
+      },
+      "ogle_aksam": {
+        "corba": "Ezogelin/Kremalı Tavuk Çorbası",
+        "ana_yemek": "Etsiz Nohut Yemeği / Karışık Kızartma",
+        "yardimci_yemek": "Pirinç Pilavı",
+        "ek": "Kemalpaşa",
+        "ekmek": "Çeyrek Ekmek",
+        "su": "500 ml Su"
+      }
+    }
   ]}
