@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
+import axios from 'axios';
 import {
   ChevronLeft,
   ChevronRight,
@@ -15,7 +16,7 @@ import { database } from './firebase/config';
 import { ref, set, onValue } from 'firebase/database';
 
 
-const DayComponent = ({ data, animationClass, onLike, onDislike, likes, dislikes }) => {
+const DayComponent = ({ data, animationClass, onLike, onDislike, likes, dislikes, isUniversity = false }) => {
   const today = new Date();
   const todayString = today.toLocaleDateString("tr-TR", {
     day: "2-digit",
@@ -26,6 +27,27 @@ const DayComponent = ({ data, animationClass, onLike, onDislike, likes, dislikes
   const mealDate = new Date(data.tarih.split('.').reverse().join('-'));
   const isDatePassed = mealDate <= today;
 
+  // Üniversite verisi için farklı render
+  if (isUniversity) {
+    return (
+      <div className={`day-component ${animationClass}`}>
+        <h2 className="day-title">
+          {data.gun}, {data.tarih}
+        </h2>
+        <div className="meal-section">
+          <div className="meal-header">
+            <h3 className="meal-title dinner">
+              <Utensils className="meal-icon" />
+              Öğle Yemeği
+            </h3>
+          </div>
+          <p className="meal-text">{data.ogle || "Menü bilgisi bulunamadı"}</p>
+        </div>
+      </div>
+    );
+  }
+
+  // KYK verisi için mevcut render
   return (
     <div className={`day-component ${animationClass}`}>
       <h2 className="day-title">
@@ -72,15 +94,18 @@ DayComponent.propTypes = {
   data: PropTypes.shape({
     gun: PropTypes.string.isRequired,
     tarih: PropTypes.string.isRequired,
-    kahvalti: PropTypes.shape({
-      corba: PropTypes.string.isRequired,
-      ana_urun: PropTypes.string.isRequired,
-      ana_urun2: PropTypes.string.isRequired,
-      kahvaltilik: PropTypes.arrayOf(PropTypes.string),
-      icecek: PropTypes.string.isRequired,
-      ekmek: PropTypes.string.isRequired,
-      su: PropTypes.string.isRequired
-    }).isRequired,
+    kahvalti: PropTypes.oneOfType([
+      PropTypes.shape({
+        corba: PropTypes.string.isRequired,
+        ana_urun: PropTypes.string.isRequired,
+        ana_urun2: PropTypes.string.isRequired,
+        kahvaltilik: PropTypes.arrayOf(PropTypes.string),
+        icecek: PropTypes.string.isRequired,
+        ekmek: PropTypes.string.isRequired,
+        su: PropTypes.string.isRequired
+      }),
+      PropTypes.string
+    ]).isRequired,
     ogle_aksam: PropTypes.shape({
       corba: PropTypes.string.isRequired,
       ana_yemek: PropTypes.string.isRequired,
@@ -88,23 +113,30 @@ DayComponent.propTypes = {
       ek: PropTypes.string.isRequired,
       ekmek: PropTypes.string.isRequired,
       su: PropTypes.string.isRequired
-    }).isRequired
+    }),
+    ogle: PropTypes.string,
+    aksam: PropTypes.string
   }).isRequired,
   animationClass: PropTypes.string.isRequired,
   onLike: PropTypes.func.isRequired,
   onDislike: PropTypes.func.isRequired,
   likes: PropTypes.object.isRequired,
-  dislikes: PropTypes.object.isRequired
+  dislikes: PropTypes.object.isRequired,
+  isUniversity: PropTypes.bool
 };
 
 export default function MobileMealPlanner() {
   const [mealPlan, setMealPlan] = useState([]);
+  const [universityMeals, setUniversityMeals] = useState([]);
+  const [universityCurrentIndex, setUniversityCurrentIndex] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [startIndex, setStartIndex] = useState(0);
   const [animationClass, setAnimationClass] = useState("");
   const [alertMessage, setAlertMessage] = useState("");
   const [likes, setLikes] = useState({});
   const [dislikes, setDislikes] = useState({});
+  const [activeTab, setActiveTab] = useState('kyk'); // 'kyk' veya 'university'
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", "dark");
@@ -174,6 +206,12 @@ export default function MobileMealPlanner() {
     }
   };
 
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    setAlertMessage("");
+  };
+
   useEffect(() => {
     fetch("/aralik.json")
       .then((response) => {
@@ -215,26 +253,75 @@ export default function MobileMealPlanner() {
       });
   }, []);
 
+  // Üniversite menülerini yükle
+  useEffect(() => {
+    fetch("/aralikveriler.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Üniversite verisi yüklenemedi');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (data.university_menus && Array.isArray(data.university_menus)) {
+          setUniversityMeals(data.university_menus);
+          
+          // Bugünün tarihini bul
+          const today = new Date();
+          const todayString = today.toLocaleDateString("tr-TR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+          });
+          
+          const todayIndex = data.university_menus.findIndex(
+            (menu) => menu.tarih === todayString
+          );
+          
+          const initialIndex = todayIndex >= 0 ? todayIndex : 0;
+          setUniversityCurrentIndex(initialIndex);
+        }
+      })
+      .catch((error) => {
+        console.error("Üniversite menüleri yüklenirken hata:", error);
+      });
+  }, []);
+
 
   const handleNavigation = (direction) => {
     setAnimationClass(
       direction === "next" ? "slide-out-left" : "slide-out-right"
     );
     setTimeout(() => {
-      setCurrentIndex((prev) => {
-        const newIndex = direction === "next" ? prev + 1 : prev - 1;
-        const maxForward = Math.min(startIndex + 5, mealPlan.length - 1);
-        const maxBackward = Math.max(startIndex - 5, 0);
-        if (newIndex > maxForward) {
-          setAlertMessage("En fazla 5 gün sonraki yemeği görebilirsiniz.");
-          return prev;
-        } else if (newIndex < maxBackward) {
-          setAlertMessage("En fazla 5 gün önceki yemeği görebilirsiniz.");
-          return prev;
-        }
-        setAlertMessage("");
-        return newIndex;
-      });
+      if (activeTab === 'kyk') {
+        setCurrentIndex((prev) => {
+          const newIndex = direction === "next" ? prev + 1 : prev - 1;
+          const maxForward = Math.min(startIndex + 5, mealPlan.length - 1);
+          const maxBackward = Math.max(startIndex - 5, 0);
+          if (newIndex > maxForward) {
+            setAlertMessage("En fazla 5 gün sonraki yemeği görebilirsiniz.");
+            return prev;
+          } else if (newIndex < maxBackward) {
+            setAlertMessage("En fazla 5 gün önceki yemeği görebilirsiniz.");
+            return prev;
+          }
+          setAlertMessage("");
+          return newIndex;
+        });
+      } else if (activeTab === 'university') {
+        setUniversityCurrentIndex((prev) => {
+          const newIndex = direction === "next" ? prev + 1 : prev - 1;
+          if (newIndex < 0) {
+            setAlertMessage("İlk menüye ulaştınız.");
+            return prev;
+          } else if (newIndex >= universityMeals.length) {
+            setAlertMessage("Son menüye ulaştınız.");
+            return prev;
+          }
+          setAlertMessage("");
+          return newIndex;
+        });
+      }
       setAnimationClass(
         direction === "next" ? "slide-in-right" : "slide-in-left"
       );
@@ -268,34 +355,83 @@ export default function MobileMealPlanner() {
 
   return (
     <div className="meal-planner">
+      {/* Tab Navigation */}
+      <div className="tab-navigation">
+        <button
+          className={`tab-button ${activeTab === 'kyk' ? 'active' : ''}`}
+          onClick={() => handleTabChange('kyk')}
+        >
+          KYK
+        </button>
+        <button
+          className={`tab-button ${activeTab === 'university' ? 'active' : ''}`}
+          onClick={() => handleTabChange('university')}
+        >
+          Üniversite
+        </button>
+      </div>
+
       <div className="planner-container" {...handlers}>
-        {Array.isArray(mealPlan) && mealPlan.length > 0 && currentIndex >= 0 && mealPlan[currentIndex] ? (
-          <>
+        {activeTab === 'kyk' ? (
+          // KYK Menüsü
+          Array.isArray(mealPlan) && mealPlan.length > 0 && currentIndex >= 0 && mealPlan[currentIndex] ? (
+            <>
+              <DayComponent
+                data={mealPlan[currentIndex]}
+                animationClass={animationClass}
+                onLike={handleLike}
+                onDislike={handleDislike}
+                likes={likes}
+                dislikes={dislikes}
+                isUniversity={false}
+              />
+              {alertMessage && (
+                <div className="alert-message">
+                  <p>{alertMessage}</p>
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="error-message">
+              <p>Yemek planı yüklenemedi. Lütfen daha sonra tekrar deneyiniz.</p>
+            </div>
+          )
+        ) : (
+          // Üniversite Menüsü
+          universityMeals.length > 0 && universityCurrentIndex >= 0 && universityMeals[universityCurrentIndex] ? (
             <DayComponent
-              data={mealPlan[currentIndex]}
+              data={universityMeals[universityCurrentIndex]}
               animationClass={animationClass}
               onLike={handleLike}
               onDislike={handleDislike}
               likes={likes}
               dislikes={dislikes}
+              isUniversity={true}
             />
-            {alertMessage && (
-              <div className="alert-message">
-                <p>{alertMessage}</p>
-              </div>
-            )}
-          </>
-        ) : (
-          <div className="error-message">
-            <p>Yemek planı yüklenemedi. Lütfen daha sonra tekrar deneyiniz.</p>
+          ) : (
+            <div className="error-message">
+              <p>Üniversite menüsü yüklenemedi. Lütfen daha sonra tekrar deneyiniz.</p>
+            </div>
+          )
+        )}
+        
+        {alertMessage && activeTab === 'university' && (
+          <div className="alert-message">
+            <p>{alertMessage}</p>
           </div>
         )}
       </div>
+
+      {/* Navigation buttons - her iki tab için de göster */}
       <div className="navigation-buttons">
         <button
           className="nav-button"
           onClick={() => handleNavigation("prev")}
-          disabled={currentIndex <= Math.max(startIndex - 5, 0)}
+          disabled={
+            activeTab === 'kyk' 
+              ? currentIndex <= Math.max(startIndex - 5, 0)
+              : universityCurrentIndex <= 0
+          }
         >
           <ChevronLeft className="button-icon" />
           Önceki
@@ -304,13 +440,16 @@ export default function MobileMealPlanner() {
           className="nav-button"
           onClick={() => handleNavigation("next")}
           disabled={
-            currentIndex >= Math.min(startIndex + 5, mealPlan.length - 1)
+            activeTab === 'kyk' 
+              ? currentIndex >= Math.min(startIndex + 5, mealPlan.length - 1)
+              : universityCurrentIndex >= universityMeals.length - 1
           }
         >
           Sonraki
           <ChevronRight className="button-icon" />
         </button>
       </div>
+
       <div className="developer-credit">
         Developed by{" "}
         <a href="https://www.linkedin.com/in/batuhanslkmm/" target="_blank" rel="noopener noreferrer">
