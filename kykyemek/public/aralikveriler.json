@@ -701,114 +701,19 @@
   ],
   "university_menus": [
     {
-      "tarih": "01.09.2025",
-      "gun": "Pazartesi",
-      "ogle": "Sebze Çorba, Nohut, Pirinç Pilavı, Yoğurt"
-    },
-    {
-      "tarih": "02.09.2025",
-      "gun": "Salı",
-      "ogle": "Ezogelin Çorba, Kağıt Kebap, Soslu Spagetti, Kase Yoğurt"
-    },
-    {
-      "tarih": "03.09.2025",
+      "tarih": "01.10.2025",
       "gun": "Çarşamba",
-      "ogle": "Mantar Çorba, Tavuk Şiş Salata, Havuçlu Pilav, Ayran"
+      "ogle": "Mercimek Çorba, Kırklareli Köftesi-Elma Dilim Patates, Şehriyeli Pirinç Pilavı, Meyve"
     },
     {
-      "tarih": "04.09.2025",
+      "tarih": "02.10.2025",
       "gun": "Perşembe",
-      "ogle": "Toyga Çorba, Ankara Tava, Karışık Kızartma, Fırın Sütlaç"
+      "ogle": "Düğün Çorba, Kıymalı Taze Fasulye, Erişte, Sütlü Tatlı"
     },
     {
-      "tarih": "05.09.2025",
+      "tarih": "03.10.2025",
       "gun": "Cuma",
-      "ogle": "K.Mercimek Çorba, Kıymalı Ispanak Yoğ., Peynirli Gül Böreği, Vişne Hoşaf"
-    },
-    {
-      "tarih": "08.09.2025",
-      "gun": "Pazartesi",
-      "ogle": "Sebze Çorba, Nohut, Pirinç Pilavı, Yoğurt"
-    },
-    {
-      "tarih": "09.09.2025",
-      "gun": "Salı",
-      "ogle": "Ezogelin Çorba, Kağıt Kebap, Soslu Spagetti, Kase Yoğurt"
-    },
-    {
-      "tarih": "10.09.2025",
-      "gun": "Çarşamba",
-      "ogle": "Mantar Çorba, Tavuk Şiş Salata, Havuçlu Pilav, Ayran"
-    },
-    {
-      "tarih": "11.09.2025",
-      "gun": "Perşembe",
-      "ogle": "Toyga Çorba, Ankara Tava, Karışık Kızartma, Fırın Sütlaç"
-    },
-    {
-      "tarih": "12.09.2025",
-      "gun": "Cuma",
-      "ogle": "K.Mercimek Çorba, Kıymalı Ispanak Yoğ., Peynirli Gül Böreği, Vişne Hoşaf"
-    },
-    {
-      "tarih": "15.09.2025",
-      "gun": "Pazartesi",
-      "ogle": "Domates Çorba, Kuru Fasulye, Ş.Pirinç Pilavı, Karışık Turşu"
-    },
-    {
-      "tarih": "16.09.2025",
-      "gun": "Salı",
-      "ogle": "Arpa Şehriye Çorba, Tavuklu Samanyolu Kebabı, Peynirli Makarna, Karışık Salata"
-    },
-    {
-      "tarih": "17.09.2025",
-      "gun": "Çarşamba",
-      "ogle": "Kaşarlı Domates Çorbası, Köfteli Avcı Kebabı, Bulgur Pilavı, Meyve"
-    },
-    {
-      "tarih": "18.09.2025",
-      "gun": "Perşembe",
-      "ogle": "Yayla Çorbası, Tavuk Sote, Makarna, Puding"
-    },
-    {
-      "tarih": "19.09.2025",
-      "gun": "Cuma",
-      "ogle": "Mısır Çorbası, Bahçıvan Kebabı, Şehriyeli Pirinç Pilavı, Yoğurt"
-    },
-    {
-      "tarih": "22.09.2025",
-      "gun": "Pazartesi",
-      "ogle": "Tavuksuyu Çorbası, Nohut, Mısırlı Pirinç Pilavı, Kemalpaşa Tatlısı"
-    },
-    {
-      "tarih": "23.09.2025",
-      "gun": "Salı",
-      "ogle": "Mercimek Çorba, Tavuk Döner - Salata, Spagetti, Ayran"
-    },
-    {
-      "tarih": "24.09.2025",
-      "gun": "Çarşamba",
-      "ogle": "Brokoli Çorba, Kadınbudu Köfte - Salata, Fırın Makarna, Meyve Suyu"
-    },
-    {
-      "tarih": "25.09.2025",
-      "gun": "Perşembe",
-      "ogle": "Tavuksuyu Çorba, Patlıcan Musakka, Sebzeli Bulgur Pilavı, Yoğurt"
-    },
-    {
-      "tarih": "26.09.2025",
-      "gun": "Cuma",
-      "ogle": "Kırmızı Biber Çorba, Orman Kebabı, Şehriyeli Pirinç Pilavı, Meyve"
-    },
-    {
-      "tarih": "29.09.2025",
-      "gun": "Pazartesi",
-      "ogle": "Düğün Çorba, Havuçlu Patatesli Barbunya Yemeği, Bulgur Pilavı, Puding"
-    },
-    {
-      "tarih": "30.09.2025",
-      "gun": "Salı",
-      "ogle": "Mısır Çorbası, Fırın Tavuk Bonfile - Elma Dilim Patates, Makarna, Ayran"
+      "ogle": "Tavuksuyu Çorba, Bahçıvan Kebabı, Su Böreği, Ayran"
     }
   ]
 }
