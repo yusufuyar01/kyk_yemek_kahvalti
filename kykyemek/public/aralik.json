@@ -602,30 +602,6 @@
       "tarih": "26.11.2025",
       "gun": "Çarşamba",
       "kahvalti": {
-        "ana_urun": "Peynirli Omlet",
-        "ana_urun2": "Simit",
-        "kahvaltilik": [
-          "Kaşar Peynir",
-          "Siyah/Yeşil Zeytin",
-          "Tahinli Pekmez"
-        ],
-        "ekmek": "Çeyrek Ekmek",
-        "su": "500 ml Su",
-        "icecek": "Çay/Bitki Çayı"
-      },
-      "ogle_aksam": {
-        "corba": "Mercimek/Şehriye Çorbası",
-        "ana_yemek": "Tas Kebabı / Karışık Dolma (yoğurt ile)",
-        "yardimci_yemek": "Arpa Şehriye Pilavı",
-        "ek": "Acılı Ezme",
-        "ekmek": "Çeyrek Ekmek",
-        "su": "500 ml Su"
-      }
-    },
-    {
-      "tarih": "27.11.2025",
-      "gun": "Perşembe",
-      "kahvalti": {
         "ana_urun": "Patates Kızartması",
         "ana_urun2": "Haşlanmış Yumurta",
         "kahvaltilik": [
@@ -642,6 +618,30 @@
         "ana_yemek": "Tavuk Fajita (susuz) / Patates Yemeği",
         "yardimci_yemek": "Sebzeli Bulgur Pilavı",
         "ek": "Yeşil Salata",
+        "ekmek": "Çeyrek Ekmek",
+        "su": "500 ml Su"
+      }      
+    },
+    {
+      "tarih": "27.11.2025",
+      "gun": "Perşembe",
+      "kahvalti": {
+        "ana_urun": "Peynirli Omlet",
+        "ana_urun2": "Simit",
+        "kahvaltilik": [
+          "Kaşar Peynir",
+          "Siyah/Yeşil Zeytin",
+          "Tahinli Pekmez"
+        ],
+        "ekmek": "Çeyrek Ekmek",
+        "su": "500 ml Su",
+        "icecek": "Çay/Bitki Çayı"
+      },
+      "ogle_aksam": {
+        "corba": "Mercimek/Şehriye Çorbası",
+        "ana_yemek": "Tas Kebabı / Karışık Dolma (yoğurt ile)",
+        "yardimci_yemek": "Arpa Şehriye Pilavı",
+        "ek": "Acılı Ezme",
         "ekmek": "Çeyrek Ekmek",
         "su": "500 ml Su"
       }
